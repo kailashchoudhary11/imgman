@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'imgpdf.apps.ImgpdfConfig',
-    'imgpro.apps.ImgproConfig',
+    'sinimg.apps.SinimgConfig',
 ]
 
 MIDDLEWARE = [
