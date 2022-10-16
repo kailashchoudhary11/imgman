@@ -2,6 +2,7 @@
 
 imgman is an image manipulation website built with which provides options for converting an image to blur, black and white, grayscale, pdf.
 
+# Table Of Content
 - [imgman](#imgman)
   - [Background](#background)
   - [Architecture](#architecture)
