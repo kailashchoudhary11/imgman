@@ -5,9 +5,9 @@ from django.urls import reverse_lazy
 from django.views import View
 from sinimg.forms import SinImgForm
 from sinimg.models import SinImg
-from sinimg.helper import blur, color_to_grayscale, img_to_pdf 
+from sinimg.helper import blur, color_to_grayscale, clr_to_bw, img_to_pdf
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur"]
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White"]
 
 class ProcessImage(View):
     def get(self, request, choice):
@@ -30,6 +30,8 @@ class ProcessImage(View):
             file_name = "demo.pdf"
         elif choice == 2:
             img = blur(path)
+        elif choice == 3:
+            img = clr_to_bw(path)
 
         option = request.POST.get("type")
 
