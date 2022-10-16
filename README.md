@@ -2,9 +2,10 @@
 
 imgman is an image manipulation website built with which provides options for converting an image to blur, black and white, grayscale, pdf.
 
-# Table Of Content
+## Table Of Content
+
 - [imgman](#imgman)
-- [Table Of Content](#table-of-content)
+  - [Table Of Content](#table-of-content)
   - [Screenshots](#screenshots)
   - [Background](#background)
   - [Architecture](#architecture)
@@ -17,6 +18,7 @@ imgman is an image manipulation website built with which provides options for co
   - [Running Locally](#running-locally)
     - [Prerequisites](#prerequisites)
     - [Clone the repo](#clone-the-repo)
+    - [***Create New Virtual Environment***](#create-new-virtual-environment)
     - [Install the requirements](#install-the-requirements)
     - [Setup Database and make migrations](#setup-database-and-make-migrations)
   - [**Making Contribution**](#making-contribution)
@@ -131,7 +133,24 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 git clone https://github.com/kailashchoudhary11/imgman.git
 ```
 
-cd imgman
+### ***Create New Virtual Environment***
+
+1. Cd into Project Directory
+2. Open New Terminal and Run
+
+```bash
+py -m venv venv
+```
+
+1. Activate Virtual Env
+
+```bash
+.\env\Scripts\activate
+```
+
+[Virtual Environment setup guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)
+
+***note: you should be on the same dir as requirements.txt file***
 
 ### Install the requirements
 
