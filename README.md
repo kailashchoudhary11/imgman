@@ -3,7 +3,6 @@
 imgman is an image manipulation website built with which provides options for converting an image to blur, black and white, grayscale, pdf.
 
 - [imgman](#imgman)
-  - [Screenshots](#screenshots)
   - [Background](#background)
   - [Architecture](#architecture)
   - [Project Folder Structure](#project-folder-structure)
@@ -43,7 +42,7 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 
 ## Project Folder Structure
 
-imgman
+```imgman
 ├── imgman
 │   ├── __init__.py
 │   ├── asgi.py
@@ -80,7 +79,7 @@ imgman
 ├── LICENSE
 ├── manage.py
 ├── README.md
-└── requirements.txt
+└── requirements.txt```
 
 ## Objectives
 
