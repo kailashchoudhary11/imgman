@@ -1,6 +1,6 @@
 # imgman
 
-imgman is an image manipulation website built with which provides options for converting an image to blur, black and white, grayscale, pdf.
+imgman is an image manipulation website built with django, which provides options for converting an image to blur, black and white, grayscale, pdf.
 
 ## Table Of Content
 
@@ -24,6 +24,7 @@ imgman is an image manipulation website built with which provides options for co
   - [**Making Contribution**](#making-contribution)
   - [License](#license)
   - [Code of Conduct](#code-of-conduct)
+  - [Contributors](#contributors)
   - [Happy Coding](#happy-coding)
 
 ## Screenshots
@@ -188,6 +189,10 @@ Please make sure to update tests as appropriate.
 ## Code of Conduct
 
 <https://github.com/kailashchoudhary11/imgman/blob/master/CODE_OF_CONDUCT.md>
+
+## Contributors
+
+A big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgman/graphs/contributors)!
 
 ## Happy Coding
 
