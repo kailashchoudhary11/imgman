@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
@@ -106,6 +110,9 @@
       width: 100%;
       height: auto;
     }
+    .fa {
+      padding: 5px;
+    }
   </style>
   <body>
     <ul>
@@ -137,7 +144,11 @@
     </ul>
     <div class="container-fluid">{% block body %}{% endblock body %}</div>
     <div class="footer">
-      <span>Footer</span>
+      <i class="fa fa-github" style="font-size: 36px"></i>
+      <p>
+        Your Github name<br />
+        <a href="mailto:someting@example.com">something@example.com</a>
+      </p>
     </div>
   </body>
 </html>
