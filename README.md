@@ -79,7 +79,8 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 ├── LICENSE
 ├── manage.py
 ├── README.md
-└── requirements.txt```
+└── requirements.txt
+```
 
 ## Objectives
 
