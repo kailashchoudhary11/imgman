@@ -4,6 +4,8 @@ imgman is an image manipulation website built with which provides options for co
 
 # Table Of Content
 - [imgman](#imgman)
+- [Table Of Content](#table-of-content)
+  - [Screenshots](#screenshots)
   - [Background](#background)
   - [Architecture](#architecture)
   - [Project Folder Structure](#project-folder-structure)
@@ -40,6 +42,7 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 - img2pdf
 - Pillow
 - sqlite3
+- OpenCV
 
 ## Project Folder Structure
 
