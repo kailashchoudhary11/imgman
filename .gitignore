@@ -4,3 +4,4 @@ venv/
 __pycache__/
 media/
 demo.png
+/img
