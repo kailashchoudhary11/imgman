@@ -126,11 +126,11 @@ In order to contribute to the project and setup the project locally refer to [Co
 
 
 ## License
-<https://github.com/kailashchoudhary11/imgman/blob/master/LICENSE.md>
+This Project is Licensed Under [MIT License](LICENSE.md)
 
 ## Code of Conduct
 
-<https://github.com/kailashchoudhary11/imgman/blob/master/CODE_OF_CONDUCT.md>
+Please Follow Our [Code Of Conduct](CODE_OF_CONDUCT.md).
 
 ## Contributors
 
