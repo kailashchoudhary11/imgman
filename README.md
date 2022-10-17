@@ -120,7 +120,7 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 
 > Project is : Development
 
-## [Contribution Rules and Regulations](https://github.com/kailashchoudhary11/imgman/blob/master/CONTRIBUTING.md)
+## Contributing To The Project
 
 In order to contribute to the project and setup the project locally refer to [Contributing](CONTRIBUTING.md) File.
 
