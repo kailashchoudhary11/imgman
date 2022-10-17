@@ -134,7 +134,13 @@ In order to contribute to the project and setup the project locally refer to [Co
 
 ## Contributors
 
-A big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgman/graphs/contributors)!
+Big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgman/graphs/contributors)!
+<br>
+<br>
+<a href="https://github.com/kailashchoudhary11/imgman/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kailashchoudhary11/imgman&&max=817" />
+</a>
+
 
 ## Happy Coding
 
