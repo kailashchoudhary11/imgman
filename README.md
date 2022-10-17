@@ -120,68 +120,10 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 
 > Project is : Development
 
-## Running Locally
+## Contributing To The Project
 
-### Prerequisites
+In order to contribute to the project and setup the project locally refer to [Contributing](CONTRIBUTING.md) File.
 
-- Atleast Python 3.8
-- Vscode or any other IDE
-- Django 3.1.7
-
-### Clone the repo
-
-```bash
-git clone https://github.com/kailashchoudhary11/imgman.git
-```
-
-### ***Create New Virtual Environment***
-
-1. Cd into Project Directory
-2. Open New Terminal and Run
-
-```bash
-py -m venv venv
-```
-
-1. Activate Virtual Env
-
-```bash
-.\env\Scripts\activate
-```
-
-[Virtual Environment setup guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)
-
-***note: you should be on the same dir as requirements.txt file***
-
-### Install the requirements
-
-```bash
-pip install -r requirements.txt
-```
-
-### Setup Database and make migrations
-
-```bash
-python manage.py migrate
-```
-
-```bash
-python manage.py runserver
-```
-
-## **Making Contribution**
-
-- Fork the repo
-- Create a new branch
-- Make your changes
-- Describe your changes in the pull request
-- Make a pull request
-- Wait for your pull request to be merged
-- rockenroll
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 <https://github.com/kailashchoudhary11/imgman/blob/master/LICENSE.md>
