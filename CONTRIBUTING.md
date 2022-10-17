@@ -2,33 +2,33 @@
 
 Before contributing, please read through the guidelines carefully.
 
-## installation and Usage
+## Installation and Usage
 
 ### Prerequisites
 
-- Atleast Python 3.8
-- Vscode or any other IDE
-- Django 3.1.7
+- Python >= 3.8
+- VS Code or any other IDE
+
+### First Of All Fork The Repo
 
 ### Clone the repo
 
 ```bash
-git clone https://github.com/kailashchoudhary11/imgman.git
+git clone https://github.com/{your-github-username}/imgman.git
+cd imgman
 ```
 
 ### ***Create New Virtual Environment***
 
-1. Cd into Project Directory
 2. Open New Terminal and Run
 
 ```bash
-py -m venv venv
+python -m venv venv
 ```
-
-1. Activate Virtual Env
+Activate the Virtual Environment
 
 ```bash
-.\env\Scripts\activate
+.\venv\Scripts\activate
 ```
 
 [Virtual Environment setup guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)
