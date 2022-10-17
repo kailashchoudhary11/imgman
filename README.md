@@ -143,4 +143,4 @@ Big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgma
 
 
 ## Happy Coding
-
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
