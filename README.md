@@ -138,7 +138,7 @@ Big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgma
 <br>
 <br>
 <a href="https://github.com/kailashchoudhary11/imgman/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kailashchoudhary11/imgman&&max=817" />
+  <img src="https://contrib.rocks/image?repo=kailashchoudhary11/imgman" />
 </a>
 
 
