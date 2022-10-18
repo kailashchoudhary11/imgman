@@ -4,7 +4,7 @@ imgman is an image manipulation website built with django, which provides option
 
 ## ***Table Of Content***
 
-- ### [**imgman**](#imgman)
+- ## [**imgman**](#imgman)
   - ### [*Table Of Content*](#table-of-content)
   - ### [*Screenshots*](#screenshots)
   - ### [*Background*](#background)
