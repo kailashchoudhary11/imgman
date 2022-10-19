@@ -46,6 +46,11 @@
         >
       </li>
     </ul>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
     <div class="container-fluid">{% block body %}{% endblock body %}</div>
     <div class="footer">
       <span>Footer</span>
