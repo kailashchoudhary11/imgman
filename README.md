@@ -1,4 +1,4 @@
-# imgman
+# ***imgman***
 
 imgman is an image manipulation website built with django, which provides options for converting an image to blur, black and white, grayscale, pdf.
 
