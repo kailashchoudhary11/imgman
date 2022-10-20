@@ -42,40 +42,6 @@
       <span>Footer</span>
     </div>
   </div>
-  <script>
-    async function convertFunc(code) {
-      const route = generateRoute(code);
-      const process = await fetch(route).then((data) => data.text())
-      window.history.pushState({}, "", route)
-      document.getElementById("app").innerHTML = process;
-    }
-
-    function generateRoute(code) {
-      const ROUTES = {
-        "zero": "/sinimg/process/0/",
-        "first": "/sinimg/process/1/",
-        "second": "/sinimg/process/2/",
-        "third": "/sinimg/process/3/",
-      }
-      const isZero = code == 0
-      const isFirst = code == 1
-      const isSecond = code == 2
-      const isThird = code == 3
-
-      if (isZero) {
-        return ROUTES.zero
-      }
-      if (isFirst) {
-        return ROUTES.first
-      }
-      if (isSecond) {
-        return ROUTES.second
-      }
-      if (isThird) {
-        return ROUTES.third
-      }
-    }
-  </script>
 </body>
 
 </html>
