@@ -1,68 +1,87 @@
 # Contributing Guidelines
 
-Before contributing, please read through the guidelines carefully.
+Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md) .
 
 ## Installation and Usage
 
-### Prerequisites
+- ### Prerequisites
 
-- Python >= 3.8
-- VS Code or any other IDE
+    - Python >= 3.8
 
-### First Of All Fork The Repo
+    - VS Code or any other IDE
 
-### Clone the repo
+- ### Fork the Repository
 
-```bash
-git clone https://github.com/{your-github-username}/imgman.git
-cd imgman
-```
+    Click on the fork button on the upper right corner to fork the repository.
 
-### ***Create New Virtual Environment***
+- ### Clone the Repository
 
-2. Open New Terminal and Run
+    ```bash
+    git clone https://github.com/{your-github-username}/imgman.git
 
-```bash
-python -m venv venv
-```
-Activate the Virtual Environment
+    cd imgman
+    ```
 
-```bash
-.\venv\Scripts\activate
-```
+- ### Create and Activate New Virtual Environment
 
-[Virtual Environment setup guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)
+    Refer to this [guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/) or follow the below steps!
 
-***note: you should be on the same dir as requirements.txt file***
+    ```bash
+    python -m venv venv
+    ```
 
-### Install the requirements
+    - Windows 
+        ```bash
+        .\venv\Scripts\activate
+        ```
 
-```bash
-pip install -r requirements.txt
-```
+    - Linux / Mac 
+        ```bash
+        source venv/bin/activate
+        ```
 
-### Setup Database and make migrations
+    ***note: you should be on the same dir as requirements.txt file***
 
-```bash
-python manage.py migrate
-```
+- ### Install the requirements
 
-```bash
-python manage.py runserver
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+- ### Create .env File
+
+    Create a new .env file same as the [.env.example](.env.example) file.
+    
+- ### Create Database and Tables
+
+    ```bash
+    python manage.py migrate
+    ```
+
+- ### Run the Django Server
+
+    ```bash
+    python manage.py runserver
+    ```
 
 ## Pull Requests
 We actively welcome your pull requests.
 
 1. Fork the repo and create your branch from `main`.
+
 2. If you've added code that should be tested, add tests.
+
 3. If you've changed APIs, update the documentation.
+
 4. Ensure the test suite passes.
+
 5. Make sure your code lints.
 
 
 ## Issues
-We use GitHub issues to track public bugs. Please ensure your description is
+We use GitHub issues to track public bugs.
+
+Please ensure your description is
 clear and has sufficient instructions to be able to reproduce the issue.
 
 ## License

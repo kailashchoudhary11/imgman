@@ -28,3 +28,12 @@ def clr_to_bw(img):
     is_success, buffer = cv2.imencode(".png", blackAndWhiteImage)
     io_buf = BytesIO(buffer)
     return io_buf
+
+def resize(img, width, height=None):
+    if height is None:
+        height = width / 4 * 3
+    originalImage = cv2.imread(img)
+    resizedImage = cv2.resize(originalImage, [width, height])
+    issuccess, buffer = cv2.imencode(".png", resizedImage)
+    io_buf = BytesIO(buffer)
+    return io_buf

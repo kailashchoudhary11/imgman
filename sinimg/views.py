@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from sinimg.forms import SinImgForm
 from sinimg.models import SinImg
-from sinimg.helper import blur, color_to_grayscale, clr_to_bw, img_to_pdf
+from sinimg.helper import blur, color_to_grayscale, clr_to_bw, img_to_pdf, resize
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 
@@ -34,6 +34,8 @@ class ProcessImage(View):
             img = blur(path)
         elif choice == 3:
             img = clr_to_bw(path)
+        elif choice == 4:
+            img = resize(path)
         else:
             return HttpResponse("Invalid Option")
 
@@ -86,5 +88,5 @@ class Upload(View):
 
             return redirect(reverse_lazy("sinimg:select-choice"))
         else:
-            messages.warning(request, 'Plese select a Picture')
+            messages.warning(request, 'Please select a Picture')
             return HttpResponseRedirect(request.path)
