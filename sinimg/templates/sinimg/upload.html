@@ -1,7 +1,47 @@
 {% extends 'base.html' %} {% block body %}
 
-<form action="" method="post" enctype="multipart/form-data">
+<form id="form_id" method="post" enctype="multipart/form-data">
   {% csrf_token %} {{ form.errors }} {{ form.as_p }}
   <input type="submit" value="Upload" />
 </form>
+<script lang="js">
+
+  const form = document.getElementById("form_id");
+  form.onsubmit = async (event) => {
+    event.preventDefault();
+    const img = form.img.files
+    if (img.length === 0) {
+      alert("no files selected");
+      return
+    }
+
+    const token = form.csrfmiddlewaretoken.value;
+    const url = "{% url 'sinimg:upload' %}";
+    const options = {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'text/html; charset=utf-8',
+        'X-CSRFToken': token
+      },
+      body: JSON.stringify(img),
+    };
+
+
+    try {
+      const { data, status } = await doSubmit(url, options);
+      console.info(data, status);
+      window.history.pushState({}, "", "/sinimg/select_choice/")
+      const select_choices = await fetch("/sinimg/select_choice/").then((data) => data.text())
+      document.getElementById("app").innerHTML = select_choices;
+    } catch (error) {
+      console.error(error);
+      throw new Error("Upload fails...")
+    }
+
+    async function doSubmit(url, options) {
+      return await fetch(url, options);
+    }
+  }
+</script>
 {% endblock body %}
