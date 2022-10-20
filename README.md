@@ -1,31 +1,25 @@
-# imgman
+# ***imgman***
 
 imgman is an image manipulation website built with django, which provides options for converting an image to blur, black and white, grayscale, pdf.
 
-## Table Of Content
+## ***Table Of Content***
 
-- [imgman](#imgman)
-  - [Table Of Content](#table-of-content)
-  - [Screenshots](#screenshots)
-  - [Background](#background)
-  - [Architecture](#architecture)
-  - [Project Folder Structure](#project-folder-structure)
-  - [Objectives](#objectives)
-  - [Technologies Used](#technologies-used)
-  - [imgman Features](#imgman-features)
-  - [Key features and release dates](#key-features-and-release-dates)
-  - [Project Status](#project-status)
-  - [Running Locally](#running-locally)
-    - [Prerequisites](#prerequisites)
-    - [Clone the repo](#clone-the-repo)
-    - [***Create New Virtual Environment***](#create-new-virtual-environment)
-    - [Install the requirements](#install-the-requirements)
-    - [Setup Database and make migrations](#setup-database-and-make-migrations)
-  - [**Making Contribution**](#making-contribution)
-  - [License](#license)
-  - [Code of Conduct](#code-of-conduct)
-  - [Contributors](#contributors)
-  - [Happy Coding](#happy-coding)
+- ## [**imgman**](#imgman)
+  - ### [*Table Of Content*](#table-of-content)
+  - ### [*Screenshots*](#screenshots)
+  - ### [*Background*](#background)
+  - ### [*Architecture*](#architecture)
+  - ### [*Project Folder Structure*](#project-folder-structure)
+  - ### [*Objectives*](#objectives)
+  - ### [*Technologies Used*](#technologies-used)
+  - ### [*imgman Features*](#imgman-features)
+  - ### [*Key features and release dates*](#key-features-and-release-dates)
+  - ### [*Project Status*](#project-status)
+  - ### [***Making Contribution***](#making-contribution)
+  - ### [*License*](#license)
+  - ### [*Code of Conduct*](#code-of-conduct)
+  - ### [*Contributors*](#contributors)
+  - ### [***Happy Coding***](#happy-coding)
 
 ## Screenshots
 
