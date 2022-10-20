@@ -1,25 +1,25 @@
-# ***imgman***
+![Logo](static/images/logo.png)
 
 imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.
 
 ## ***Table Of Content***:
 
-- ## [**imgman**](#imgman)
-  - ### [*Table Of Content*](#table-of-content)
-  - ### [*Screenshots*](#screenshots)
-  - ### [*Background*](#background)
-  - ### [*Architecture*](#architecture)
-  - ### [*Project Folder Structure*](#project-folder-structure)
-  - ### [*Objectives*](#objectives)
-  - ### [*Technologies Used*](#technologies-used)
-  - ### [*imgman Features*](#imgman-features)
-  - ### [*Key features and release dates*](#key-features-and-release-dates)
-  - ### [*Project Status*](#project-status)
-  - ### [***Making Contribution***](#making-contribution)
-  - ### [*License*](#license)
-  - ### [*Code of Conduct*](#code-of-conduct)
-  - ### [*Contributors*](#contributors)
-  - ### [***Happy Coding***](#happy-coding)
+- [imgman](#imgman)
+  - [Table Of Content](#table-of-content)
+  - [Screenshots](#screenshots)
+  - [Background](#background)
+  - [Architecture](#architecture)
+  - [Project Folder Structure](#project-folder-structure)
+  - [Objectives](#objectives)
+  - [Technologies Used](#technologies-used)
+  - [imgman Features](#imgman-features)
+  - [Key features and release dates](#key-features-and-release-dates)
+  - [Project Status](#project-status)
+  - [Making Contribution](#making-contribution)
+  - [License](#license)
+  - [Code of Conduct](#code-of-conduct)
+  - [Contributors](#contributors)
+  - [Happy Coding](#happy-coding)
 
 ## Screenshots:
 
@@ -114,17 +114,14 @@ This project, ***imgman***, is an initiative by [Kailash Choudhary](https://gith
 
 > Project is under Development
 
-## Contributing To The Project:
+## Making Contribution:
 
 In order to contribute to the project and setup the project locally refer to [Contributing](CONTRIBUTING.md) File.
 
 
 ## License:
+
 This Project is Licensed Under [MIT License](LICENSE.md)
-
-## Code of Conduct:
-
-Please Follow Our [Code Of Conduct](CODE_OF_CONDUCT.md).
 
 ## Contributors:
 
