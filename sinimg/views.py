@@ -5,11 +5,11 @@ from django.urls import reverse_lazy
 from django.views import View
 from sinimg.forms import SinImgForm
 from sinimg.models import SinImg
-from sinimg.helper import blur, color_to_grayscale, clr_to_bw, img_to_pdf, resize
+from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White"]
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image"]
 
 class ProcessImage(View):
     def get(self, request, choice):
@@ -36,6 +36,10 @@ class ProcessImage(View):
             img = clr_to_bw(path)
         elif choice == 4:
             img = resize(path)
+        elif choice == 5:
+            img = encrypt_image(path)
+        elif choice == 6:
+            img = decrypt_image(path)
         else:
             return HttpResponse("Invalid Option")
 
