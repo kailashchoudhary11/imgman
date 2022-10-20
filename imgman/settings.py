@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sinimg.apps.SinimgConfig',
+    # define my core app   
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
