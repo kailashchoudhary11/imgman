@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,126 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <title>{% block title %}{% endblock title %}</title>
 </head>
-<style>
-  .container-fluid {
-    padding: 50px;
-    text-align: center;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-
-  li {
-    float: left;
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  li a:hover {
-    background-color: #111;
-  }
-
-  .glyphicon {
-    margin: 10px;
-  }
-
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    background-color: #04caf5;
-    color: white;
-    padding: 10px 15px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1vw;
-  }
-
-  .linksToConvert {
-    width: 100%;
-    background-color: #04caf5;
-    color: white;
-    padding: 10px 15px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1vw;
-    margin-bottom: 1.2rem;
-  }
-
-  input[type="file"] {
-    width: 100%;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    line-height: 150%;
-    font-size: 0.85em;
-  }
-
-  label {
-    border-radius: 5px;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    line-height: 150%;
-    font-size: 1.5vw;
-  }
-
-  #file-upload-button {
-    width: 100%;
-    background-color: #04caf5;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-  }
-</style>
 
 <body>
   <div id="app">
-
     <ul>
       <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-home"> </i> Home Page</a>
+        <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home Page</a>
       </li>
       <li>
         <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i> Upload Pic</a>
@@ -141,12 +32,16 @@
         <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-user"></i>Contact us</a>
       </li>
     </ul>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
     <div class="container-fluid">{% block body %}{% endblock body %}</div>
     <div class="footer">
       <span>Footer</span>
     </div>
   </div>
-
   <script>
     async function convertFunc(code) {
       const route = generateRoute(code);

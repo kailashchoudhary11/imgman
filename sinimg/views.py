@@ -6,6 +6,8 @@ from django.views import View
 from sinimg.forms import SinImgForm
 from sinimg.models import SinImg
 from sinimg.helper import blur, color_to_grayscale, clr_to_bw, img_to_pdf
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 CHOICES = [
     {
@@ -49,14 +51,18 @@ class ProcessImage(View):
             img = blur(path)
         elif choice == 3:
             img = clr_to_bw(path)
+        else:
+            return HttpResponse("Invalid Option")
 
         option = request.POST.get("type")
 
         if option == "Preview":
             image_data = img.getvalue()
             return HttpResponse(image_data, content_type=content_type)
-
-        return FileResponse(img, as_attachment=True, filename=file_name)
+        elif option == "Download":
+            return FileResponse(img, as_attachment=True, filename=file_name)
+        else:
+            return HttpResponse("Invalid Option")
 
 class SelectChoice(View):
     def get(self, request):
@@ -98,8 +104,6 @@ class Upload(View):
             request.session['id'] = obj.id     
 
             return redirect(reverse_lazy("sinimg:select-choice"))
-
-        context = {
-            "form": form,
-        }
-        return render(request, "sinimg/upload.html", context)
+        else:
+            messages.warning(request, 'Plese select a Picture')
+            return HttpResponseRedirect(request.path)
