@@ -37,3 +37,20 @@ def resize(img, width, height=None):
     issuccess, buffer = cv2.imencode(".png", resizedImage)
     io_buf = BytesIO(buffer)
     return io_buf
+
+def encrypt_image(img, key=123):
+    img = cv2.imread(img)
+    xor_encrypted_img = cv2.bitwise_xor(img, key)
+    is_success, buffer = cv2.imencode(".png", xor_encrypted_img)
+    io_buf = BytesIO(buffer)
+    return io_buf
+
+def decrypt_image(img, key=123):
+    '''
+    Expects to get an image that was encrypted earlier
+    '''
+    img = cv2.imread(img)
+    xor_decrypted_img = cv2.bitwise_xor(img, key)
+    is_success, buffer = cv2.imencode(".png", xor_decrypted_img)
+    io_buf = BytesIO(buffer)
+    return io_buf
