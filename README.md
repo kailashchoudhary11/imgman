@@ -1,8 +1,8 @@
 # ***imgman***
 
-imgman is an image manipulation website built with django, which provides options for converting an image to blur, black and white, grayscale, pdf.
+imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.
 
-## ***Table Of Content***
+## ***Table Of Content***:
 
 - ## [**imgman**](#imgman)
   - ### [*Table Of Content*](#table-of-content)
@@ -21,7 +21,7 @@ imgman is an image manipulation website built with django, which provides option
   - ### [*Contributors*](#contributors)
   - ### [***Happy Coding***](#happy-coding)
 
-## Screenshots
+## Screenshots:
 
 ![Screenshot (1)]
 
@@ -29,11 +29,11 @@ imgman is an image manipulation website built with django, which provides option
 
 ![Screenshot (3)]
 
-## Background
+## Background:
 
-This project, ***imgman***, is a project initiative founded by <https://github.com/kailashchoudhary11>. It is a platform that allows users to manipulate images.
+This project, ***imgman***, is an initiative by [Kailash Choudhary](https://github.com/kailashchoudhary11). It is a platform that allows users to apply unique filters and manipulate images and export them.
 
-## Architecture
+## Architecture:
 
 - Django
 - img2pdf
@@ -41,7 +41,7 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 - sqlite3
 - OpenCV
 
-## Project Folder Structure
+## Project Folder Structure:
 
 ```imgman
 ├── imgman
@@ -83,50 +83,50 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 └── requirements.txt
 ```
 
-## Objectives
+## Objectives:
 
 - [x] Create a website that allows users to manipulate images
 - [ ] finish the homepage
 - [ ] finish the readme
 - [ ] other objectives
 
-## Technologies Used
+## Technologies Used:
 
 - HTML/CSS/Javascript (Frontend)
 - Django - Framework, Python(Backend)
 - GIT (Version Control)
 - sqlite3 (Database)
 
-## imgman Features
+## imgman Features:
 
 - [x] Upload an image
 - [ ] choose a filter
 - [ ] export the image
 - [ ] integrate with other image manipulation libraries
 
-## Key features and release dates
+## Key features and release dates:
 
 > Landing page
 > Upload Page
 > User Dashboard
 
-## Project Status
+## Project Status:
 
-> Project is : Development
+> Project is under Development
 
-## Contributing To The Project
+## Contributing To The Project:
 
 In order to contribute to the project and setup the project locally refer to [Contributing](CONTRIBUTING.md) File.
 
 
-## License
+## License:
 This Project is Licensed Under [MIT License](LICENSE.md)
 
-## Code of Conduct
+## Code of Conduct:
 
 Please Follow Our [Code Of Conduct](CODE_OF_CONDUCT.md).
 
-## Contributors
+## Contributors:
 
 Big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgman/graphs/contributors)!
 <br>
