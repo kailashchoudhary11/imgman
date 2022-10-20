@@ -2,6 +2,7 @@
     padding: 50px;
     text-align: center;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -25,6 +26,7 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
 .glyphicon {
     margin: 10px;
 }
@@ -41,7 +43,9 @@ li a:hover {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-size: 1em;
 }
+
 input[type="submit"] {
     width: 100%;
     background-color: #04caf5;
@@ -62,8 +66,9 @@ input[type="file"] {
     display: block;
     text-align: center;
     line-height: 150%;
-    font-size: 0.85em;
+    font-size: 2em;
 }
+
 label {
     border-radius: 5px;
     padding: 20px;
@@ -72,6 +77,7 @@ label {
     line-height: 150%;
     font-size: 1.5vw;
 }
+
 #file-upload-button {
     width: 100%;
     background-color: #04caf5;
@@ -82,6 +88,7 @@ label {
     border-radius: 4px;
     cursor: pointer;
 }
+
 img {
     border-radius: 10px;
     width: 100%;
@@ -99,4 +106,111 @@ img {
     cursor: pointer;
     font-size: 1vw;
     margin-bottom: 1.2rem;
-  }
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #111;
+}
+
+footer .content {
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .content p,
+a {
+    color: #fff;
+}
+
+footer .content .box {
+    width: 33%;
+    transition: all 0.4s ease;
+}
+
+footer .content .topic {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+footer .content p {
+    text-align: justify;
+}
+
+footer .content .lower .topic {
+    margin: 24px 0 5px 0;
+}
+
+footer .content .lower i {
+    padding-right: 16px;
+}
+
+footer .content .middle {
+    padding-left: 80px;
+}
+
+footer .content .middle a {
+    line-height: 32px;
+}
+
+footer .content .right input[type="text"] {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #d9d9d9;
+    background: #000;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+}
+
+footer .content .media-icons a {
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid #222222;
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width:1100px) {
+    footer .content .middle {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width:950px) {
+    footer .content .box {
+        width: 50%;
+    }
+    .content .right {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:560px) {
+    footer {
+        position: relative;
+    }
+    footer .content .box {
+        width: 100%;
+        margin-top: 30px;
+    }
+    footer .content .middle {
+        padding-left: 0;
+    }
+}

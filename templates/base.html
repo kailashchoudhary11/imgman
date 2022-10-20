@@ -1,47 +1,68 @@
-{% load static %}
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <title>{% block title %}{% endblock title %}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 
 <body>
-  <div id="app">
-    <ul>
-      <li>
-        <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home Page</a>
-      </li>
-      <li>
-        <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i> Upload Pic</a>
-      </li>
-      <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-refresh"></i>Covert pic</a>
-      </li>
-      <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-info-sign"></i>About us</a>
-      </li>
-      <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-user"></i>Contact us</a>
-      </li>
-    </ul>
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-    {% endfor %}
-    {% endif %}
-    <div class="container-fluid">{% block body %}{% endblock body %}</div>
-    <div class="footer">
-      <span>Footer</span>
+    <div id="app">
+        <ul>
+            <li>
+                <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home Page</a>
+            </li>
+            <li>
+                <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i> Upload Pic</a>
+            </li>
+            <li>
+                <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-refresh"></i>Covert pic</a>
+            </li>
+            <li>
+                <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-info-sign"></i>About us</a>
+            </li>
+            <li>
+                <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-user"></i>Contact us</a>
+            </li>
+        </ul>
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %} {% endif %}
+        <div class="container-fluid">{% block body %}{% endblock body %}</div>
+        <div class="footer">
+            <footer_edited>
+                <div class="content">
+                    <div class="left box">
+                        <div class="upper">
+                            <div class="topic">Imgman</div>
+                            <p>imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python
+                                web framework.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="middle box">
+                        <div class="topic">Github</div>
+                        <div><a href="https://github.com/kailashchoudhary11/imgman">Repository</a></div>
+                    </div> -->
+                    <div class="right box">
+                        <div class="topic">Connect</div>
+                        <form action="#">
+                            <div class="media-icons">
+                                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                                <a href="https://github.com/kailashchoudhary11/imgman"><i class="fab fa-github"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </footer_edited>
+        </div>
     </div>
-  </div>
 </body>
 
 </html>
