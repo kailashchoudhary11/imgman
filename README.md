@@ -1,11 +1,12 @@
 ![Logo](static/images/logo.png)
 
+## **imgman**
+
 imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.
 
 ## ***Table Of Content***:
 
-- [imgman](#imgman)
-  - [Table Of Content](#table-of-content)
+  - [imgman](#imgman)
   - [Screenshots](#screenshots)
   - [Background](#background)
   - [Architecture](#architecture)
@@ -17,7 +18,6 @@ imgman is a unique web app which provides myriad of image manipulation options l
   - [Project Status](#project-status)
   - [Making Contribution](#making-contribution)
   - [License](#license)
-  - [Code of Conduct](#code-of-conduct)
   - [Contributors](#contributors)
   - [Happy Coding](#happy-coding)
 
