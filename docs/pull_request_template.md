@@ -1,5 +1,6 @@
-@@ -0,0 +1,36 @@
-# Pull Request Template
+***Please Provide The following Details About your PR.*** 
+
+***Type x Inside the checkbox to tick it.***
 
 ## Description
 
