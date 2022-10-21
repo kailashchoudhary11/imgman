@@ -1,8 +1,6 @@
 ![Logo](static/images/logo.png)
 
-<iframe src="https://discord.com/widget?id=1033034001260236910&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-![Discord Server](https://discordapp.com/api/guilds/1033034001260236910/widget.png?style=banner3)
+[![Discord Server](https://discordapp.com/api/guilds/1033034001260236910/widget.png?style=banner3)](https://discord.gg/GWvNKAKkJS)
 
 ## **imgman**
 
