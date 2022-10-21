@@ -1,6 +1,6 @@
-***Please Provide The following Details About your PR.*** 
+Please Provide The following Details About your PR
 
-***Type x Inside the checkbox to tick it.***
+Type x Inside the checkbox to tick it
 
 ## Description
 
