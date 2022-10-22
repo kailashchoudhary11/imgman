@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block body %}
-<img src="{{ object.img.url }}" alt="Uploaded Image" width="50%" />
+<img src="{{ object.img.url }}" alt="Uploaded Image" width="25%" />
 
 <form action="" method="post">
   {% csrf_token %} {% for choice in choices %}
