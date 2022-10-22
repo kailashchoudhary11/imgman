@@ -10,7 +10,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 import cv2
 import numpy as np
-import urllib
+import urllib.request
 
 CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image"]
 
