@@ -1,5 +1,7 @@
 ![Logo](static/images/logo.png)
 
+[![Discord Server](https://discordapp.com/api/guilds/1033034001260236910/widget.png?style=banner3)](https://discord.gg/GWvNKAKkJS)
+
 ## **imgman**
 
 imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.
@@ -118,6 +120,7 @@ This project, ***imgman***, is an initiative by [Kailash Choudhary](https://gith
 
 In order to contribute to the project and setup the project locally refer to [Contributing](CONTRIBUTING.md) File.
 
+Also Please Join our [Discord Server](https://discord.gg/GWvNKAKkJS) For Discussion Related to the project!
 
 ## License:
 
