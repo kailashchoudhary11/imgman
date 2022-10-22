@@ -157,14 +157,17 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Cloudinary stuff
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv("CLOUD_NAME"),
-    'API_KEY': os.getenv("API_KEY"),
-    'API_SECRET': os.getenv("API_SECRET"),
+    'cloud_name': os.getenv("cloud_name"),
+    'api_key': os.getenv("api_key"),
+    'api_secret': os.getenv("api_secret"),
 }
+cloudinary.config( 
+  cloud_name = CLOUDINARY_STORAGE.get('cloud_name'), 
+  api_key = CLOUDINARY_STORAGE.get('api_key'), 
+  api_secret = CLOUDINARY_STORAGE.get('api_secret')
+)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
