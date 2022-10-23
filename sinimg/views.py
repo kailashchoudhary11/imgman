@@ -8,6 +8,9 @@ from sinimg.models import SinImg
 from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+import cv2
+import numpy as np
+import urllib.request
 
 CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image"]
 
@@ -19,7 +22,12 @@ class ProcessImage(View):
 
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
-        path = obj.img.path
+
+        # Retrieving the image and storing it in memory
+        url = obj.img.url
+        req = urllib.request.urlopen(url)
+        arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+        path = cv2.imdecode(arr, -1) # 'Load it as it is'
 
         content_type = "image/png"
         file_name = "demo.png"
@@ -44,7 +52,7 @@ class ProcessImage(View):
             return HttpResponse("Invalid Option")
 
         option = request.POST.get("type")
-
+        
         if option == "Preview":
             image_data = img.getvalue()
             return HttpResponse(image_data, content_type=content_type)
@@ -58,7 +66,6 @@ class SelectChoice(View):
 
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
-        
         context={
                 "object": obj, 
                 "choices": CHOICES,
