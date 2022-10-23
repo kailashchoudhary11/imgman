@@ -10,7 +10,7 @@ class SinImg(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"#{self.id} {self.img.name.split('/')[-1]}"
+        return f"#{self.id} {self.img.public_id.rsplit('/')[-1]}"
 
 @receiver(pre_delete, sender=SinImg)
 def photo_delete(sender, instance, **kwargs):

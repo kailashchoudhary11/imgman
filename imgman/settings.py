@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage',
 
+    # Crontab
+    'django_crontab',
+
     # define sinimg app
     'sinimg.apps.SinimgConfig',
     # define my core app   
@@ -175,6 +178,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+## Print Logs on the terminal
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -194,3 +199,10 @@ LOGGING = {
         },
     },
 }
+
+
+## Django Crontab Settings
+
+CRONJOBS = [
+    ('*/5 * * * *', 'django.core.management.call_command', ['delete-image'])
+]
