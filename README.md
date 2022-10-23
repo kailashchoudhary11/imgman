@@ -27,11 +27,20 @@ You can visit the website over [**here**](https://imgman.herokuapp.com/)
 
 ## Screenshots:
 
-![Screenshot (1)]
+![screencapture-imgman-herokuapp-sinimg-upload-2022-10-23-08_58_56](https://user-images.githubusercontent.com/49649259/197379292-8698a66b-8fa1-496f-96a8-8e25bae50011.png)
 
-![Screenshot (2)]
 
-![Screenshot (3)]
+<div align="center">
+ <p> Uploaded base image: </p>
+<img src="https://user-images.githubusercontent.com/49649259/197379319-9bc54f61-138c-4653-8b32-21e7dbfa216c.jpg" />
+    
+ <p> Results: </p>
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379351-c27e3266-163d-4270-bd8e-f8343d292a9f.png" />
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379420-e486bf9d-e6d7-41fa-b74e-d9234f4b268d.png" />
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379415-7f598819-cc75-4dd7-876e-affaa937ec7f.png" />
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379417-4cdb11cf-ab26-4a67-9e04-e2a829d9f1d9.png" />
+  </div>
+</div>
 
 ## Background:
 
