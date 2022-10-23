@@ -1,9 +1,14 @@
 .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 50px;
     text-align: center;
 }
 
 ul {
+    display: flex;
+    justify-content: space-around;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,7 +52,7 @@ li a:hover {
 }
 
 input[type="submit"] {
-    width: 100%;
+    width: 7rem;
     background-color: #04caf5;
     color: white;
     padding: 10px 15px;
@@ -191,6 +196,9 @@ footer .content .media-icons a {
     footer .content .middle {
         padding-left: 50px;
     }
+    #id_img {
+        max-width: 40%;
+    }
 }
 
 @media (max-width:950px) {
@@ -222,14 +230,17 @@ footer .content .media-icons a {
         width: 67px;
         background: url(/static/images/burger-bar.png) no-repeat 98% center;
     }
-    nav ul {
-        overflow: hidden;
-        /* height: 0; */
-    }
-    nav ul .open {
+    nav ul.open {
         height: auto;
+        position:absolute;
     }
-
+    nav ul {
+        display: block;
+        overflow: hidden;
+        height: 0;
+        min-width: 330px;
+    }
+    
     nav ul li {
         float: none;
         text-align: left;
@@ -237,31 +248,29 @@ footer .content .media-icons a {
         margin: 0;
     }
 
-    nav ul li a {
+    a.active {
         color: #fff;
         border-bottom: 1px solid #404040;
         display: block;
         margin: 0;
         font-size: 2rem;
+        width: 100%;
     }
     input[type="submit"] {
         font-size: 2rem;
-        max-width: 40%;
+        max-width: 11rem;
+        min-width:9rem;
     }
     label {
         font-size: 2rem;
     }
     #id_img {
         max-width: 95%;
-        min-width: 300px;
+        min-width: 316px;
         font-size: 2.1rem;
-        /* padding: 0; */
     }
-    .container-fluid {
-        /* text-align: center; */
-    }
-    /* .footer {
+    .footer {
         font-size: .75rem;
-        text-overflow: ;
-    } */
+        text-overflow: hidden;
+    }
 }
