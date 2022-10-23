@@ -7,6 +7,7 @@ from django.dispatch import receiver
 # Create your models here.
 class SinImg(models.Model):
     img = CloudinaryField('image', folder="media/images/single")
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"#{self.id} {self.img.name.split('/')[-1]}"
