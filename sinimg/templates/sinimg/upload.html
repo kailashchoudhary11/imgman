@@ -1,8 +1,63 @@
 {% extends 'base.html' %}
 {% block body %}
+<div class="upload_container">
+  <form id="form_id" method="post" enctype="multipart/form-data">
+    <label for="id_img" class="upload-input-ui" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <i class="glyphicon glyphicon-cloud-upload text-danger"></i>
+      <p class="text-secondary">Click here to upload or
+        <strong class="text-cian">Drag</strong> and <strong class="text-cian">Drop!</strong>
+      </p>
+    </label>
+    <div class="django-container">
+      {% csrf_token %} {{ form.errors }} {{ form.as_p }}
+    </div>
+    <br />
+    <div class="new-input-file d-flex" disabled>
+      <p id="input_ui">File name here</p>
+      <button class="upload-button flex-item" type="submit">Upload</button>
+    </div>
+  </form>
+</div>
 
-<form id="form_id" method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form.errors }} {{ form.as_p }}
-  <input type="submit" value="Upload" />
-</form>
+<script>
+
+  const input = document.getElementById("id_img");
+
+
+  input.onchange = (e) => {
+    const [file] = e.target.files
+    const fileName = file.name;
+    setFileNameValue(fileName);
+
+  }
+
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+    const [file] = ev.dataTransfer.files;
+    const fileName = file.name;
+    ev.preventDefault();
+    setFileNameValue(fileName);
+    setFile(file);
+  }
+
+  function setFileNameValue(newName) {
+    const inputUI = document.getElementById("input_ui");
+    inputUI.innerText = `${newName}`
+  }
+
+  function setFile(newFile) {
+    console.info(newFile);
+    const hiddenInput = document.getElementById("id_img");
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(new File([newFile], newFile.name));
+    hiddenInput.files = dataTransfer.files;
+  }
+</script>
 {% endblock body %}

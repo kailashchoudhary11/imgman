@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.text-cian {
+    color: RED;
+}
+
 ul {
     display: flex;
     justify-content: space-around;
