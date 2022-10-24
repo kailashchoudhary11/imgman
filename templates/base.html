@@ -6,11 +6,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/container.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/image.styles.css' %}">
     <title>{% block title %}{% endblock title %}</title>
 </head>
 
@@ -18,12 +22,14 @@
     <div id="app">
         <nav>
             <a class="burger-nav"></a>
-            <ul class="open">
+            <ul>
                 <li>
-                    <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home Page</a>
+                    <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home
+                        Page</a>
                 </li>
                 <li>
-                    <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i> Upload Pic</a>
+                    <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i>
+                        Upload Pic</a>
                 </li>
                 <li>
                     <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-refresh"></i>Covert pic</a>
@@ -46,7 +52,9 @@
                     <div class="left box">
                         <div class="upper">
                             <div class="topic">Imgman</div>
-                            <small>imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python
+                            <small>imgman is a unique web app which provides myriad of image manipulation options like
+                                blurring of image, black and white filters, converting to pdf, adding grayscale effect,
+                                resizing the image. It's built with django, a python
                                 web framework.</small>
                         </div>
                     </div>
@@ -65,9 +73,8 @@
     </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" 
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="/static/js/menu.js"></script>
 
 </html>
