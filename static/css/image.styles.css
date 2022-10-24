@@ -1,0 +1,16 @@
+
+
+@media screen and (max-width: 737px) {
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 738px) {
+  img {
+    width: 30%;
+    height: auto;
+  }
+}
