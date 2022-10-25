@@ -1,10 +1,17 @@
 {% extends 'base.html' %} {% block body %}
-<img src="{{ object.img.url }}" alt="Uploaded Image" width="50%" />
 
-<form action="" method="post">
-  {% csrf_token %} {% for choice in choices %}
-  <input type="submit" value="{{ choice }}" name="type" />
-  {% endfor %}
-</form>
+<div class="choices-container">
+  <img src="{{ object.img.url }}" alt="Uploaded Image" />
+  <div>
+    <form method="post">
+      <div class="choices-container--item">
+        {% csrf_token %} {% for choice in choices %}
+        <input type="submit" value="{{ choice }}" name="type" />
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+
+</div>
 
 {% endblock body %}

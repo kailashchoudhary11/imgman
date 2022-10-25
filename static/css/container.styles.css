@@ -1,0 +1,30 @@
+.choices-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.choices-container--item input{
+  display: block;
+  margin-bottom: 2rem;  
+}
+
+.upload_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+@media screen and (max-width: 737px) {
+  .choices-container {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+  }
+  .choices-container--item input {
+
+  }
+}
