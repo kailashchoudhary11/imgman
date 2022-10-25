@@ -14,10 +14,11 @@ import urllib.request
 
 from sinimg.steg import hide_text, reveal_text
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image", "Steghide", "Stegreveal"]
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image", "Hide Text", "Reveal Text"]
 
 class ProcessImage(View):
     def get(self, request, choice):
+        # messages.success(request, "Updated successfully!")
         return render(request, "sinimg/process.html")
 
     def post(self, request, choice):
@@ -78,7 +79,6 @@ class SelectChoice(View):
                 "object": obj, 
                 "choices": CHOICES,
                 }
-
         return render(request, "sinimg/select_choice.html", context)
 
     def post(self, request):
