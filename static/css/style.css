@@ -229,6 +229,10 @@ footer .content .media-icons a {
         height: 67px;
         width: 67px;
         background: url(/static/images/burger-bar.png) no-repeat 98% center;
+        back
+    }
+    nav {
+        back
     }
     nav ul.open {
         height: auto;
@@ -272,6 +276,7 @@ footer .content .media-icons a {
     .footer {
         font-size: .75rem;
         text-overflow: hidden;
+        height: 10vh;
     }
     .footer-text {
         display: none;
@@ -282,5 +287,16 @@ footer .content .media-icons a {
     }
     .footer i {
         width: 1.5rem;
+    }
+    .content .right {
+        margin-top: 0;
+    }
+    #connect {
+        display: none;
+    }
+    .media-icons {
+        font-size: 3rem;
+        display: flex;
+        justify-content: space-evenly
     }
 }
