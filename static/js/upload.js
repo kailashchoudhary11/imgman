@@ -34,7 +34,7 @@ function drop(ev) {
 function setFileNameValue(newName) {
   const inputUI = document.getElementById("input_ui");
   inputUI.innerText = `${newName}`
-  inputUI.className = "text-danger"
+  inputUI.className = "text-red"
 }
 
 function setFile(newFile) {
