@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/button.styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/container.styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/image.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.styles.css' %}">
     <title>{% block title %}{% endblock title %}</title>
 </head>
 
@@ -46,35 +47,19 @@
         <div class="alert alert-{{ message.tags }}">{{ message }}</div>
         {% endfor %} {% endif %}
         <div class="container-fluid">{% block body %}{% endblock body %}</div>
-        <div class="footer">
-            <footer_edited>
-                <div class="content">
-                    <div class="left box">
-                        <div class="upper">
-                            <div class="topic">Imgman</div>
-                            <small>imgman is a unique web app which provides myriad of image manipulation options like
-                                blurring of image, black and white filters, converting to pdf, adding grayscale effect,
-                                resizing the image. It's built with django, a python
-                                web framework.</small>
-                        </div>
-                    </div>
-                    <div class="right box">
-                        <div class="topic">Connect</div>
-                        <form action="#">
-                            <div class="media-icons">
-                                <a href="https://twitter.com/CodeWithKai"><i class="fab fa-twitter"></i></a>
-                                <a href="https://github.com/kailashchoudhary11/imgman"><i class="fab fa-github"></i></a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </footer_edited>
-        </div>
+        <footer class="footer">
+            <div class="d-flex">
+                <p class="text-white">© Imgman</p>
+            </div>
+
+        </footer>
     </div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="/static/js/menu.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="{% static 'js/upload.js' %}"></script>
 
 </html>
