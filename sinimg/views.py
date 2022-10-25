@@ -12,10 +12,13 @@ import cv2
 import numpy as np
 import urllib.request
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image"]
+from sinimg.steg import hide_text, reveal_text
+
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image", "Hide Text", "Reveal Text"]
 
 class ProcessImage(View):
     def get(self, request, choice):
+        # messages.success(request, "Updated successfully!")
         return render(request, "sinimg/process.html")
 
     def post(self, request, choice):
@@ -48,12 +51,18 @@ class ProcessImage(View):
             img = encrypt_image(path)
         elif choice == 6:
             img = decrypt_image(path)
+        elif choice == 7:
+            img = hide_text(path)
+        elif choice == 8:
+            text, img = reveal_text(path)
+            return HttpResponse(f"{text}")
         else:
             return HttpResponse("Invalid Option")
 
         option = request.POST.get("type")
         
         if option == "Preview":
+            type(img)
             image_data = img.getvalue()
             return HttpResponse(image_data, content_type=content_type)
         elif option == "Download":
@@ -70,7 +79,6 @@ class SelectChoice(View):
                 "object": obj, 
                 "choices": CHOICES,
                 }
-
         return render(request, "sinimg/select_choice.html", context)
 
     def post(self, request):
