@@ -12,8 +12,7 @@
       box-sizing: border-box;
     }
 
-    input[type=text],
-    textarea {
+    .fields {
       width: 100%;
       padding: 12px;
       border: 1px solid #ccc;
@@ -24,7 +23,7 @@
       resize: vertical;
     }
 
-    input[type=submit] {
+    .submit-btn {
       background-color: gray;
       color: white;
       padding: 12px 20px;
@@ -33,7 +32,7 @@
       cursor: pointer;
     }
 
-    input[type=submit]:hover {
+    .submit-btn:hover {
       background-color: red;
     }
 
@@ -51,17 +50,17 @@
 
   <div class="container">
     <form action="/action_page.php">
-      <label for="fname">Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Full Name..">
+      <label for="name">Name</label>
+      <input type="text" class="fields" name="name" placeholder="Full Name">
 
-      <label for="lname">Email</label>
-      <input type="text" id="lname" name="email" placeholder="Email">
+      <label for="email">Email</label>
+      <input type="email" class="fields" name="email" placeholder="Email">
 
 
       <label for="subject">Message</label>
-      <textarea id="subject" name="subject" placeholder="Write your query." style="height:200px"></textarea>
+      <textarea class="fields" name="subject" placeholder="Write your query." style="height:200px"></textarea>
 
-      <input type="submit" value="Submit">
+      <input class="submit-btn" type="submit" value="Submit">
     </form>
   </div>
 
