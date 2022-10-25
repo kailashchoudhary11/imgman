@@ -3,79 +3,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <title>{% block title %}{% endblock title %}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/global.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/button.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/container.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/image.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.styles.css' %}">
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 
 <body>
-  <div id="app">
-    <ul>
-      <li>
-        <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home Page</a>
-      </li>
-      <li>
-        <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i> Upload Pic</a>
-      </li>
-      <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-refresh"></i>Covert pic</a>
-      </li>
-      <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-info-sign"></i>About us</a>
-      </li>
-      <li>
-        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-user"></i>Contact us</a>
-      </li>
-    </ul>
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-    {% endfor %}
-    {% endif %}
-    <div class="container-fluid">{% block body %}{% endblock body %}</div>
-    <div class="footer">
-      <span>Footer</span>
+    <div id="app">
+        <nav>
+            <a class="burger-nav"></a>
+            <ul>
+                <li>
+                    <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home
+                        Page</a>
+                </li>
+                <li>
+                    <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i>
+                        Upload Pic</a>
+                </li>
+                <li>
+                    <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-refresh"></i>Covert pic</a>
+                </li>
+                <li>
+                    <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-info-sign"></i>About us</a>
+                </li>
+                <li>
+                    <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-user"></i>Contact us</a>
+                </li>
+            </ul>
+        </nav>
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %} {% endif %}
+        <div class="container-fluid">{% block body %}{% endblock body %}</div>
+        <footer class="footer">
+            <div class="d-flex">
+                <p class="text-white">© Imgman</p>
+            </div>
+
+        </footer>
     </div>
-  </div>
-  <script>
-    async function convertFunc(code) {
-      const route = generateRoute(code);
-      const process = await fetch(route).then((data) => data.text())
-      window.history.pushState({}, "", route)
-      document.getElementById("app").innerHTML = process;
-    }
-
-    function generateRoute(code) {
-      const ROUTES = {
-        "zero": "/sinimg/process/0/",
-        "first": "/sinimg/process/1/",
-        "second": "/sinimg/process/2/",
-        "third": "/sinimg/process/3/",
-      }
-      const isZero = code == 0
-      const isFirst = code == 1
-      const isSecond = code == 2
-      const isThird = code == 3
-
-      if (isZero) {
-        return ROUTES.zero
-      }
-      if (isFirst) {
-        return ROUTES.first
-      }
-      if (isSecond) {
-        return ROUTES.second
-      }
-      if (isThird) {
-        return ROUTES.third
-      }
-    }
-  </script>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="{% static 'js/upload.js' %}"></script>
 
 </html>

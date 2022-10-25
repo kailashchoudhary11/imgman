@@ -1,47 +1,21 @@
-{% extends 'base.html' %} {% block body %}
-
-<form id="form_id" method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form.errors }} {{ form.as_p }}
-  <input type="submit" value="Upload" />
-</form>
-<script lang="js">
-
-  const form = document.getElementById("form_id");
-  form.onsubmit = async (event) => {
-    event.preventDefault();
-    const img = form.img.files
-    if (img.length === 0) {
-      alert("no files selected");
-      return
-    }
-
-    const token = form.csrfmiddlewaretoken.value;
-    const url = "{% url 'sinimg:upload' %}";
-    const options = {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'text/html; charset=utf-8',
-        'X-CSRFToken': token
-      },
-      body: JSON.stringify(img),
-    };
-
-
-    try {
-      const { data, status } = await doSubmit(url, options);
-      console.info(data, status);
-      window.history.pushState({}, "", "/sinimg/select_choice/")
-      const select_choices = await fetch("/sinimg/select_choice/").then((data) => data.text())
-      document.getElementById("app").innerHTML = select_choices;
-    } catch (error) {
-      console.error(error);
-      throw new Error("Upload fails...")
-    }
-
-    async function doSubmit(url, options) {
-      return await fetch(url, options);
-    }
-  }
-</script>
+{% extends 'base.html' %}
+{% block body %}
+<div class="upload_container">
+  <form id="form_id" method="post" enctype="multipart/form-data">
+    <label for="id_img" class="upload-input-ui" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <i class="glyphicon glyphicon-cloud-upload text-danger"></i>
+      <p class="text-secondary">Click here to upload or
+        <strong class="text-cian">Drag</strong> and <strong class="text-cian">Drop!</strong>
+      </p>
+    </label>
+    <div class="django-container">
+      {% csrf_token %} {{ form.errors }} {{ form.as_p }}
+    </div>
+    <br />
+    <div class="new-input-file d-flex" disabled>
+      <p id="input_ui">File name here</p>
+      <button class="upload-button flex-item" type="submit">Upload</button>
+    </div>
+  </form>
+</div>
 {% endblock body %}

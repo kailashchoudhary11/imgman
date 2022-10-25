@@ -1,39 +1,52 @@
-# ***imgman***
+![Logo](static/images/logo.png)
 
-imgman is an image manipulation website built with django, which provides options for converting an image to blur, black and white, grayscale, pdf.
+[![Discord Server](https://discordapp.com/api/guilds/1033034001260236910/widget.png?style=banner3)](https://discord.gg/GWvNKAKkJS)
 
-## ***Table Of Content***
+## [**imgman**](https://imgman.herokuapp.com/)
 
-- ## [**imgman**](#imgman)
-  - ### [*Table Of Content*](#table-of-content)
-  - ### [*Screenshots*](#screenshots)
-  - ### [*Background*](#background)
-  - ### [*Architecture*](#architecture)
-  - ### [*Project Folder Structure*](#project-folder-structure)
-  - ### [*Objectives*](#objectives)
-  - ### [*Technologies Used*](#technologies-used)
-  - ### [*imgman Features*](#imgman-features)
-  - ### [*Key features and release dates*](#key-features-and-release-dates)
-  - ### [*Project Status*](#project-status)
-  - ### [***Making Contribution***](#making-contribution)
-  - ### [*License*](#license)
-  - ### [*Code of Conduct*](#code-of-conduct)
-  - ### [*Contributors*](#contributors)
-  - ### [***Happy Coding***](#happy-coding)
+imgman is a unique web app which provides myriad of image manipulation options like blurring of image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.
 
-## Screenshots
+You can visit the website over [**here**](https://imgman.herokuapp.com/)
 
-![Screenshot (1)]
+## ***Table Of Content***:
 
-![Screenshot (2)]
+  - [imgman](#imgman)
+  - [Screenshots](#screenshots)
+  - [Background](#background)
+  - [Architecture](#architecture)
+  - [Project Folder Structure](#project-folder-structure)
+  - [Objectives](#objectives)
+  - [Technologies Used](#technologies-used)
+  - [imgman Features](#imgman-features)
+  - [Key features and release dates](#key-features-and-release-dates)
+  - [Project Status](#project-status)
+  - [Making Contribution](#making-contribution)
+  - [License](#license)
+  - [Contributors](#contributors)
+  - [Happy Coding](#happy-coding)
 
-![Screenshot (3)]
+## Screenshots:
 
-## Background
+![screencapture-imgman-herokuapp-sinimg-upload-2022-10-23-08_58_56](https://user-images.githubusercontent.com/49649259/197379292-8698a66b-8fa1-496f-96a8-8e25bae50011.png)
 
-This project, ***imgman***, is a project initiative founded by <https://github.com/kailashchoudhary11>. It is a platform that allows users to manipulate images.
 
-## Architecture
+<div align="center">
+ <p> Uploaded base image: </p>
+<img src="https://user-images.githubusercontent.com/49649259/197379319-9bc54f61-138c-4653-8b32-21e7dbfa216c.jpg" />
+    
+ <p> Results: </p>
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379351-c27e3266-163d-4270-bd8e-f8343d292a9f.png" />
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379420-e486bf9d-e6d7-41fa-b74e-d9234f4b268d.png" />
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379415-7f598819-cc75-4dd7-876e-affaa937ec7f.png" />
+    <img width="220" src="https://user-images.githubusercontent.com/49649259/197379417-4cdb11cf-ab26-4a67-9e04-e2a829d9f1d9.png" />
+  </div>
+</div>
+
+## Background:
+
+This project, ***imgman***, is an initiative by [Kailash Choudhary](https://github.com/kailashchoudhary11). It is a platform that allows users to apply unique filters and manipulate images and export them.
+
+## Architecture:
 
 - Django
 - img2pdf
@@ -41,7 +54,7 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 - sqlite3
 - OpenCV
 
-## Project Folder Structure
+## Project Folder Structure:
 
 ```imgman
 ├── imgman
@@ -83,50 +96,48 @@ This project, ***imgman***, is a project initiative founded by <https://github.c
 └── requirements.txt
 ```
 
-## Objectives
+## Objectives:
 
 - [x] Create a website that allows users to manipulate images
 - [ ] finish the homepage
 - [ ] finish the readme
 - [ ] other objectives
 
-## Technologies Used
+## Technologies Used:
 
 - HTML/CSS/Javascript (Frontend)
 - Django - Framework, Python(Backend)
 - GIT (Version Control)
 - sqlite3 (Database)
 
-## imgman Features
+## imgman Features:
 
 - [x] Upload an image
 - [ ] choose a filter
 - [ ] export the image
 - [ ] integrate with other image manipulation libraries
 
-## Key features and release dates
+## Key features and release dates:
 
 > Landing page
 > Upload Page
 > User Dashboard
 
-## Project Status
+## Project Status:
 
-> Project is : Development
+> Project is under Development
 
-## Contributing To The Project
+## Making Contribution:
 
 In order to contribute to the project and setup the project locally refer to [Contributing](CONTRIBUTING.md) File.
 
+Also Please Join our [Discord Server](https://discord.gg/GWvNKAKkJS) For Discussion Related to the project!
 
-## License
+## License:
+
 This Project is Licensed Under [MIT License](LICENSE.md)
 
-## Code of Conduct
-
-Please Follow Our [Code Of Conduct](CODE_OF_CONDUCT.md).
-
-## Contributors
+## Contributors:
 
 Big thanks to all the [Contributors](https://github.com/kailashchoudhary11/imgman/graphs/contributors)!
 <br>

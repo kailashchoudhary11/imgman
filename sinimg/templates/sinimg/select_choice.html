@@ -1,11 +1,17 @@
-{% extends 'base.html' %}
-{% block body %}
-<img src="{{ object.img.url }}" alt="Uploaded Image" width="50%" />
+{% extends 'base.html' %} {% block body %}
 
-<form method="POST">
-  {% csrf_token %} {% for choice in choices %}
-  <p class="linksToConvert" onclick="convertFunc('{{ choice.code }} ')">{{ choice.name }}</p>
+<div class="choices-container">
+  <img src="{{ object.img.url }}" alt="Uploaded Image" />
+  <div>
+    <form method="post">
+      <div class="choices-container--item">
+        {% csrf_token %} {% for choice in choices %}
+        <input type="submit" value="{{ choice }}" name="type" />
+        {% endfor %}
+      </div>
+    </form>
+  </div>
 
-  {% endfor %}
-</form>
+</div>
+
 {% endblock body %}

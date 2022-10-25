@@ -5,38 +5,32 @@ from django.urls import reverse_lazy
 from django.views import View
 from sinimg.forms import SinImgForm
 from sinimg.models import SinImg
-from sinimg.helper import blur, color_to_grayscale, clr_to_bw, img_to_pdf, resize
+from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+import cv2
+import numpy as np
+import urllib.request
 
-CHOICES = [
-    {
-        'name': "Convert To GrayScale",
-        'code': 0
-    },
-    {
-        'name': "Convert To PDF",
-        'code': 1
-    },
-    {
-        'name': "Convert To Blur",
-        'code': 2
-    },
-    {
-        'name': "Convert To Black And White",
-        'code': 3
-    }
-]
+from sinimg.steg import hide_text, reveal_text
+
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image", "Hide Text", "Reveal Text"]
 
 class ProcessImage(View):
     def get(self, request, choice):
+        # messages.success(request, "Updated successfully!")
         return render(request, "sinimg/process.html")
 
     def post(self, request, choice):
 
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
-        path = obj.img.path
+
+        # Retrieving the image and storing it in memory
+        url = obj.img.url
+        req = urllib.request.urlopen(url)
+        arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+        path = cv2.imdecode(arr, -1) # 'Load it as it is'
 
         content_type = "image/png"
         file_name = "demo.png"
@@ -53,12 +47,22 @@ class ProcessImage(View):
             img = clr_to_bw(path)
         elif choice == 4:
             img = resize(path)
+        elif choice == 5:
+            img = encrypt_image(path)
+        elif choice == 6:
+            img = decrypt_image(path)
+        elif choice == 7:
+            img = hide_text(path)
+        elif choice == 8:
+            text, img = reveal_text(path)
+            return HttpResponse(f"{text}")
         else:
             return HttpResponse("Invalid Option")
 
         option = request.POST.get("type")
-
+        
         if option == "Preview":
+            type(img)
             image_data = img.getvalue()
             return HttpResponse(image_data, content_type=content_type)
         elif option == "Download":
@@ -71,24 +75,20 @@ class SelectChoice(View):
 
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
-        
         context={
                 "object": obj, 
                 "choices": CHOICES,
                 }
-
         return render(request, "sinimg/select_choice.html", context)
 
-    # unnecessary POST here, did in frontend
-    # def post(self, request):
+    def post(self, request):
 
-    #     type = request.POST.get("type")
-    #     choice = CHOICES.index(type)
-    #     #return #redirect((reverse_lazy("sinimg:process", kwargs={"choice": choice})))
-    #     context={
-    #         'choice': choice
-    #     }
-    #     return render(request, "sinimg/select_choice.html", context)
+        type = request.POST.get("type")
+        if type:    
+            choice_id = CHOICES.index(type)
+            return redirect((reverse_lazy("sinimg:process", kwargs={"choice": choice_id})))
+        else:
+            return HttpResponse("Invalid Choice")
 
 class Upload(View):
     def get(self, request):
