@@ -6,8 +6,8 @@
     text-align: center;
 }
 
-.text-cian {
-    color: RED;
+.text-red{
+    color: red !important;
 }
 
 ul {
@@ -40,9 +40,6 @@ li a:hover {
 .glyphicon {
     margin: 10px;
 }
-
-
-
 
 
 label {
@@ -116,4 +113,23 @@ img {
         min-width: 316px;
         font-size: 2.1rem;
     }
+    .success-message {
+        font-size: 1.5rem !important;
+        width: 100%;
+        margin: 5rem auto;
+    }
+    
+    form {
+        width: 99% !important;
+    }
+}
+
+.success-message {
+    font-size: 1.8rem;
+    width: 70%;
+    margin: 5rem auto;
+}
+
+form {
+    width: 140%;
 }
