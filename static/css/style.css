@@ -238,7 +238,7 @@ footer .content .media-icons a {
         display: block;
         overflow: hidden;
         height: 0;
-        min-width: 330px;
+        min-width: 320px;
     }
     
     nav ul li {
@@ -272,5 +272,15 @@ footer .content .media-icons a {
     .footer {
         font-size: .75rem;
         text-overflow: hidden;
+    }
+    .footer-text {
+        display: none;
+    }
+    .topic {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+    }
+    .footer i {
+        width: 1.5rem;
     }
 }
