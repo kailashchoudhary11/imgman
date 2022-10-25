@@ -2,16 +2,21 @@
 
 {% block body %}
 
-<div class="alert alert-success" role="alert">
-    Your Image Has Been Processed Successfully!
-</div>
-
 <div class="container">
-    <form action="" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Download" name="type">
-        <input type="submit" value="Preview" name="type">
-    </form>
-</div>
 
+
+    <div class="w-100 d-block success-message">
+        <div class="alert alert-success text-center" role="alert">
+            Your Image Has Been Processed Successfully!
+        </div>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Download" name="type">
+            <input type="submit" value="Preview" name="type">
+        </form>
+    </div>
+
+</div>
 {% endblock body %}
