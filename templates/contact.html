@@ -1,69 +1,64 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %} {% block body %}
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    * {
-      box-sizing: border-box;
-    }
+  .fields {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
-    .fields {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
+  .submit-btn {
+    background-color: gray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-    .submit-btn {
-      background-color: gray;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+  .submit-btn:hover {
+    background-color: red;
+  }
 
-    .submit-btn:hover {
-      background-color: red;
-    }
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+</style>
 
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-  </style>
-</head>
+<h1>Contact Form</h1>
 
-<body>
+<div class="container">
+  <form method="post">
+    <label for="name">Name</label>
+    <input type="text" class="fields" name="name" placeholder="Full Name" />
 
-  <h1>Contact Form</h1>
+    <label for="email">Email</label>
+    <input type="email" class="fields" name="email" placeholder="Email" />
 
-  <div class="container">
-    <form method="post">
-      <label for="name">Name</label>
-      <input type="text" class="fields" name="name" placeholder="Full Name">
+    <label for="subject">Message</label>
+    <textarea
+      class="fields"
+      name="subject"
+      placeholder="Write your query."
+      style="height: 200px"
+    ></textarea>
 
-      <label for="email">Email</label>
-      <input type="email" class="fields" name="email" placeholder="Email">
+    <input class="submit-btn" type="submit" value="Submit" />
+  </form>
+</div>
 
-
-      <label for="subject">Message</label>
-      <textarea class="fields" name="subject" placeholder="Write your query." style="height:200px"></textarea>
-
-      <input class="submit-btn" type="submit" value="Submit">
-    </form>
-  </div>
-
-</body>
-
-</html>
+{% endblock body %}
