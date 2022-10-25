@@ -18,7 +18,7 @@ input[type="submit"] {
     margin: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1vw;
+    font-size: 2rem;
 }
 
 input[type="file"] {
@@ -42,10 +42,10 @@ input[type="file"] {
   flex-direction: column;
   align-items: center;
   justify-content: spaced-between;
-  padding-top: 2.5rem;
+  padding-top: 5rem;
 }
 .upload-input-ui p {
-  font-size: 1.3rem;
+  font-size: 1.5rem !important;
 }
 
 .django-container label, input[type="file"] {
