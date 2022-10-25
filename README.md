@@ -113,9 +113,13 @@ This project, ***imgman***, is an initiative by [Kailash Choudhary](https://gith
 ## imgman Features:
 
 - [x] Upload an image
-- [ ] choose a filter
-- [ ] export the image
-- [ ] integrate with other image manipulation libraries
+- [ ] Choose a filter
+- [ ] Add Black & White filter
+- [ ] Add Grayscale effect
+- [ ] Image blur effect
+- [ ] Convert to pdf
+- [ ] Export the image
+- [ ] Integrate with other image manipulation libraries .
 
 ## Key features and release dates:
 
