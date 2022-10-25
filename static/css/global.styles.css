@@ -139,5 +139,8 @@ img {
 }
 
 form {
-    width: 140%;
+    width: 100%;
+}
+#form_id {
+    width: 200%;
 }

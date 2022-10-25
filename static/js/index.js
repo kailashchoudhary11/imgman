@@ -1,0 +1,1 @@
+document.getElementById("id_img").setAttribute("accept", "image/*");

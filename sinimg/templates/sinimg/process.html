@@ -10,13 +10,11 @@
             Your Image Has Been Processed Successfully!
         </div>
     </div>
-    <div class="container">
-        <form action="" method="post">
-            {% csrf_token %}
-            <input type="submit" value="Download" name="type">
-            <input type="submit" value="Preview" name="type">
-        </form>
-    </div>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Download" name="type">
+        <input type="submit" value="Preview" name="type">
+    </form>
 
 </div>
 {% endblock body %}
