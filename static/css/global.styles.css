@@ -5,8 +5,11 @@
     padding: 50px;
     text-align: center;
 }
-
-.text-cian {
+.success-message {
+    margin-bottom: 15rem;
+    font-size: 1.5rem;
+}
+.text-red {
     color: RED;
 }
 
