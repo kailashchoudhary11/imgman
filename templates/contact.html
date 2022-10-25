@@ -1,64 +1,21 @@
 {% extends 'base.html' %} {% block body %}
-<style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .fields {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-
-  .submit-btn {
-    background-color: gray;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .submit-btn:hover {
-    background-color: red;
-  }
-
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-</style>
-
-<h1>Contact Form</h1>
-
-<div class="container">
-  <form method="post">
-    <label for="name">Name</label>
-    <input type="text" class="fields" name="name" placeholder="Full Name" />
-
-    <label for="email">Email</label>
-    <input type="email" class="fields" name="email" placeholder="Email" />
-
-    <label for="subject">Message</label>
-    <textarea
-      class="fields"
-      name="subject"
-      placeholder="Write your query."
-      style="height: 200px"
-    ></textarea>
-
-    <input class="submit-btn" type="submit" value="Submit" />
+<div class="main">
+  <form method="post" class="contact-form">
+    <h1 class="contact-form--title">Contact Form</h1>
+    <div class="inputs">
+      <div class="input-group">
+        <input type="text" class="contact-form--input" name="name" placeholder="Full name" />
+      </div>
+      <div class="input-group">
+        <input type="email" class="contact-form--input" name="email" placeholder="E-mail" />
+      </div>
+      <div class="input-group">
+        <textarea class="contact-form--input" name="subject" placeholder="How can we help?"
+          style="height: 100PX"></textarea>
+      </div>
+    </div>
+    <input class="contact-form--button" type="submit" value="Send" />
   </form>
-</div>
 
+</div>
 {% endblock body %}

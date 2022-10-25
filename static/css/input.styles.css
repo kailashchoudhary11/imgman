@@ -1,0 +1,9 @@
+.normal-input {
+  width:100%;
+  border: 1px solid #111;
+  background-color: transparent;
+  color: #111;
+  padding: 0.5rem;
+  border-radius: 4px;
+  padding-left: 1rem;
+}
