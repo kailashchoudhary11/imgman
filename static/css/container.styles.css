@@ -1,13 +1,12 @@
 .choices-container{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: top;
   width: 100%;
 }
 
 .choices-container--item input{
   display: block;
-  margin-bottom: 2rem;  
 }
 
 .upload_container {
@@ -22,6 +21,5 @@
   .choices-container {
     display:flex;
     flex-direction: column;
-    padding-bottom: 5rem;
   }
 }

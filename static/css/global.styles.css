@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
 .container-fluid {
     display: flex;
     justify-content: center;
@@ -5,7 +11,9 @@
     padding: 50px;
     text-align: center;
 }
-
+.input-group {
+    margin-bottom: 2rem;
+}
 .text-red{
     color: red !important;
 }
@@ -131,5 +139,8 @@ img {
 }
 
 form {
-    width: 140%;
+    width: 100%;
+}
+#form_id {
+    width: 200%;
 }
