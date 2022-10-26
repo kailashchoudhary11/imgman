@@ -56,8 +56,10 @@ INSTALLED_APPS = [
 
     # define sinimg app
     'sinimg.apps.SinimgConfig',
-    # define my core app   
+    # define core app   
     'core.apps.CoreConfig',
+    # define steganography app   
+    'steg.apps.StegConfig',
 ]
 
 MIDDLEWARE = [
@@ -206,3 +208,13 @@ LOGGING = {
 CRONJOBS = [
     ('*/5 * * * *', 'django.core.management.call_command', ['delete-image'])
 ]
+
+
+# Email Setup 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")

@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
 .container-fluid {
     display: flex;
     justify-content: center;
@@ -5,9 +11,11 @@
     padding: 50px;
     text-align: center;
 }
-
-.text-cian {
-    color: RED;
+.input-group {
+    margin-bottom: 2rem;
+}
+.text-red{
+    color: red !important;
 }
 
 ul {
@@ -40,9 +48,6 @@ li a:hover {
 .glyphicon {
     margin: 10px;
 }
-
-
-
 
 
 label {
@@ -113,4 +118,31 @@ img {
     label {
         font-size: 2rem;
     }
+    #id_img {
+        max-width: 95%;
+        min-width: 316px;
+        font-size: 2.1rem;
+    }
+    .success-message {
+        font-size: 1.5rem !important;
+        width: 100%;
+        margin: 5rem auto;
+    }
+    
+    form {
+        width: 99% !important;
+    }
+}
+
+.success-message {
+    font-size: 1.8rem;
+    width: 70%;
+    margin: 5rem auto;
+}
+
+form {
+    width: 100%;
+}
+#form_id {
+    width: 200%;
 }

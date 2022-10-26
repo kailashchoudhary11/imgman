@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("core.urls")),
     path('sinimg/', include("sinimg.urls")),
+    path('steg/', include("steg.urls")),
     path('', RedirectView.as_view(url='core/'))
 ]
 

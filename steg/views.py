@@ -1,22 +1,27 @@
-import cv2
-import numpy as np
-import urllib.request
-from django.contrib import messages
-from django.http import FileResponse, HttpResponse, HttpResponseRedirect
+from email.mime import image
+from django.http import FileResponse, HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views import View
 from sinimg.forms import SinImgForm
-from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize
 from sinimg.models import SinImg
+from django.contrib import messages
+from django.http import HttpResponseRedirect
+import cv2
+import numpy as np
+import urllib.request
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image",]
+from steg.functions import hide_lsb, reveal_lsb, hide_lsbset, reveal_lsbset
+
+CHOICES = ["LSB Hide", "LSB Reveal", "LSB Set Hide", "LSB Set Reveal"]
 
 class ProcessImage(View):
     def get(self, request, choice):
-        return render(request, "sinimg/process.html")
+        # messages.success(request, "Updated successfully!")
+        return render(request, "steg/process.html")
 
     def post(self, request, choice):
+
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
 
@@ -28,23 +33,21 @@ class ProcessImage(View):
 
         content_type = "image/png"
         file_name = "demo.png"
-
+        sec_msg = request.session.get("message", None)
         if choice == 0:
-            img = color_to_grayscale(path)
+            img = hide_lsb(path, sec_msg)
         elif choice == 1:
-            img = img_to_pdf(path)
-            content_type="application/pdf"
-            file_name = "demo.pdf"
+            msg, img = reveal_lsb(path)
+            return HttpResponse(msg)
         elif choice == 2:
-            img = blur(path)
+            img = hide_lsbset(path, sec_msg)
         elif choice == 3:
-            img = clr_to_bw(path)
+            msg, img = reveal_lsbset(path)
+            return HttpResponse(msg)
         elif choice == 4:
             img = resize(path)
         elif choice == 5:
             img = encrypt_image(path)
-        elif choice == 6:
-            img = decrypt_image(path)
         else:
             return HttpResponse("Invalid Option")
 
@@ -67,14 +70,15 @@ class SelectChoice(View):
                 "object": obj, 
                 "choices": CHOICES,
                 }
-        return render(request, "sinimg/select_choice.html", context)
+        return render(request, "steg/select_choice.html", context)
 
     def post(self, request):
 
         type = request.POST.get("type")
+        request.session["message"] = request.POST.get("message", None)
         if type:    
             choice_id = CHOICES.index(type)
-            return redirect((reverse_lazy("sinimg:process", kwargs={"choice": choice_id})))
+            return redirect((reverse_lazy("steg:process", kwargs={"choice": choice_id})))
         else:
             return HttpResponse("Invalid Choice")
 
@@ -84,7 +88,7 @@ class Upload(View):
         context = {
             "form": form,
         }
-        return render(request, "sinimg/upload.html", context)
+        return render(request, "steg/upload.html", context)
     
     def post(self, request):
         form = SinImgForm(request.POST, request.FILES)
@@ -92,7 +96,8 @@ class Upload(View):
         if form.is_valid():
             obj = form.save()
             request.session['id'] = obj.id     
-            return redirect(reverse_lazy("sinimg:select-choice"))
+
+            return redirect(reverse_lazy("steg:select-choice"))
         else:
             messages.warning(request, 'Please select a Picture')
             return HttpResponseRedirect(request.path)

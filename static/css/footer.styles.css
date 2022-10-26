@@ -8,6 +8,7 @@
     position: fixed;
     width: 100%;
     bottom: 0;
+    color: white;
 }
 @media screen and (max-width: 480px) {
     .footer {
