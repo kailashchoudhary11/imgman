@@ -56,8 +56,10 @@ INSTALLED_APPS = [
 
     # define sinimg app
     'sinimg.apps.SinimgConfig',
-    # define my core app   
+    # define core app   
     'core.apps.CoreConfig',
+    # define steganography app   
+    'steg.apps.StegConfig',
 ]
 
 MIDDLEWARE = [

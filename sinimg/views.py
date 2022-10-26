@@ -62,7 +62,6 @@ class ProcessImage(View):
         option = request.POST.get("type")
         
         if option == "Preview":
-            type(img)
             image_data = img.getvalue()
             return HttpResponse(image_data, content_type=content_type)
         elif option == "Download":
