@@ -33,14 +33,14 @@ class ProcessImage(View):
 
         content_type = "image/png"
         file_name = "demo.png"
-
+        sec_msg = request.session.get("message", None)
         if choice == 0:
-            img = hide_lsb(path)
+            img = hide_lsb(path, sec_msg)
         elif choice == 1:
             msg, img = reveal_lsb(path)
             return HttpResponse(msg)
         elif choice == 2:
-            img = hide_lsbset(path)
+            img = hide_lsbset(path, sec_msg)
         elif choice == 3:
             msg, img = reveal_lsbset(path)
             return HttpResponse(msg)
@@ -75,6 +75,7 @@ class SelectChoice(View):
     def post(self, request):
 
         type = request.POST.get("type")
+        request.session["message"] = request.POST.get("message", None)
         if type:    
             choice_id = CHOICES.index(type)
             return redirect((reverse_lazy("steg:process", kwargs={"choice": choice_id})))

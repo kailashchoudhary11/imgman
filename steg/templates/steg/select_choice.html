@@ -5,7 +5,9 @@
   <div>
     <form method="post">
       <div class="choices-container--item">
-        {% csrf_token %} {% for choice in choices %}
+        {% csrf_token %} 
+        <input type="password" name="message" placeholder="Enter Secret Message">
+        {% for choice in choices %}
         <input type="submit" value="{{ choice }}" name="type" />
         {% endfor %}
       </div>
