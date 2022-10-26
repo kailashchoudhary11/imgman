@@ -10,7 +10,7 @@
 }
 
 input[type="submit"] {
-    width: 35rem; // 560px;
+    width: 35rem; 
     background-color: #04caf5;
     color: white;
     padding: 10px 15px;
