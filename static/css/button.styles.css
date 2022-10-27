@@ -10,15 +10,15 @@
 }
 
 input[type="submit"] {
-    width: 35rem; // 560px;
-    background-color: #04caf5;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    margin: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 2rem;
+  width: 35rem;
+  background-color: #04caf5;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1vw;
 }
 
 input[type="file"] {
@@ -101,7 +101,13 @@ footer .content .right input[type="text"] {
 @media screen and (max-width: 480px) {
   input[type="submit"] {
     font-size: 2rem;
-    width: 100%
+    max-width: 11rem;
+    min-width:9rem;
+  }
+  #id_img {
+    max-width: 95%;
+    min-width: 316px;
+    font-size: 2.1rem;
   }
   .upload-input-ui {
     border: 1px dashed #6C757D;

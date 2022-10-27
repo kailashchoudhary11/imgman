@@ -1,3 +1,14 @@
+input[type="file"] {
+    width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 2em;
+}
 .normal-input {
   width:100%;
   border: 1px solid #111;
