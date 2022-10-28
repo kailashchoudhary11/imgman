@@ -1,5 +1,7 @@
 ![Logo](static/images/logo.png)
 
+## Join Our Discord Community
+
 [![Discord Server](https://discordapp.com/api/guilds/1033034001260236910/widget.png?style=banner3)](https://discord.gg/GWvNKAKkJS)
 
 ## [**imgman**](https://imgman.herokuapp.com/)
