@@ -1,0 +1,19 @@
+.content {
+    font-size: 3rem;
+}
+
+.heading {
+    font-size: 26px;
+}
+
+.images {
+    position: absolute;
+    top: 40%;
+}
+
+.img-results {
+    float: left;
+    width: 500px;
+    height: 400px;
+    margin: 10px;
+}
