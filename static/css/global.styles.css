@@ -11,6 +11,9 @@ body {
     padding: 50px;
     text-align: center;
 }
+.text-uppercase {
+   text-transform: uppercase !important;
+}
 .input-group {
     margin-bottom: 2rem;
 }
