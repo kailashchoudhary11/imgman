@@ -10,31 +10,3 @@
     bottom: 0;
     color: white;
 }
-@media screen and (max-width: 480px) {
-    .footer {
-        font-size: .75rem;
-        text-overflow: hidden;
-        height: 10vh;
-    }
-    .footer-text {
-        display: none;
-    }
-    .topic {
-        font-size: 1.5rem;
-        margin-bottom: 0px;
-    }
-    .footer i {
-        width: 1.5rem;
-    }
-    .content .right {
-        margin-top: 0;
-    }
-    #connect {
-        display: none;
-    }
-    .media-icons {
-        font-size: 3rem;
-        display: flex;
-        justify-content: space-evenly
-    }
-}
