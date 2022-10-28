@@ -46,7 +46,7 @@ function setFile(newFile) {
 
 function fileValidation(file) {
   // Regexp to validate extention file! Only Images formats
-  const validExtentionsRegex = /\.(jpe?g|png|gif|bmp)$/i;
+  const validExtentionsRegex = /\.(jpe?g|png|gif|bmp|webp|jfif)$/i;
   if (validExtentionsRegex.test(file.name)){
     return true
   } else {

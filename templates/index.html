@@ -5,7 +5,8 @@ Home
 {% block body %}
 
 <div>
-    <img src="static/images/logo.png" alt="imgman-logo">
+    {% load static %}
+    <img src="{% static 'images/logo.png' %}" alt="imgman-logo">
 </div>
 
 <div>
@@ -16,14 +17,14 @@ Home
 <div class="images">
 
     <p class="heading">Uploaded Base Image:</p>
-    <img class="img1" src="static/images/img-manipulation/base-img.jpg" alt="base-image">
+    {% comment %} <img class="img1" src="{% static 'images/img-manipulation/base-img.jpg' %}" alt="base-image"> {% endcomment %}
 
     <div>
         <p class="heading">Results: </p>
-        <img class="img-results" src="static/images/img-manipulation/gray.png" alt="gray-image">
-        <img class="img-results" src="static/images/img-manipulation/blur.png" alt="blur-image">
-        <img class="img-results" src="static/images/img-manipulation/black.png" alt="black-image">
-        <img class="img-results" src="static/images/img-manipulation/tint.png" alt="tint-image">
+        {% comment %} <img class="img-results" src="{% static '/images/img-manipulation/gray.png' %}" alt="gray-image">
+        <img class="img-results" src="{% static '/images/img-manipulation/blur.png' %}" alt="blur-image">
+        <img class="img-results" src="{% static '/images/img-manipulation/black.png' %}" alt="black-image">
+        <img class="img-results" src="{% static '/images/img-manipulation/tint.png' %}" alt="tint-image"> {% endcomment %}
     </div>
 </div>
 
