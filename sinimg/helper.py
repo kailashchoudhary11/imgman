@@ -1,6 +1,7 @@
 from io import BytesIO
 import cv2
 import img2pdf
+import numpy
 
 def blur(img):
     
@@ -30,6 +31,13 @@ def clr_to_bw(img):
     grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
     (thresh, blackAndWhiteImage) = cv2.threshold(grayImage, 127, 255, cv2.THRESH_BINARY)
     is_success, buffer = cv2.imencode(".png", blackAndWhiteImage)
+    io_buf = BytesIO(buffer)
+    return io_buf
+
+def sharp(img):
+    kernel = numpy.array([[0,-1,0],[-1,7,-1],[0,-1,0]])
+    img_sharp = cv2.filter2D(src=img, ddepth=-1, kernel=kernel )
+    is_success, buffer = cv2.imencode(".png", img_sharp)
     io_buf = BytesIO(buffer)
     return io_buf
 
