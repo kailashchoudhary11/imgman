@@ -2,6 +2,9 @@
 
 Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md) .
 
+## Figma Design Link
+- [Figma Link](https://www.figma.com/file/N1GUOSfNsqb8NTInxXj75K/Imgman-Project?node-id=0%3A1)
+
 ## Installation and Usage
 
 -   ### Prerequisites
