@@ -15,6 +15,8 @@ from steg.functions import hide_lsb, reveal_lsb, hide_lsbset, reveal_lsbset
 
 CHOICES = ["LSB Hide", "LSB Reveal", "LSB Set Hide", "LSB Set Reveal"]
 
+CHOICES_WITH_CLASSES = {"LSB Hide":"prevent", "LSB Reveal":"", "LSB Set Hide":"prevent", "LSB Set Reveal":""}
+
 class ProcessImage(View):
     def get(self, request, choice):
         # messages.success(request, "Updated successfully!")
@@ -69,6 +71,7 @@ class SelectChoice(View):
         context={
                 "object": obj, 
                 "choices": CHOICES,
+                "choices_with_classes": CHOICES_WITH_CLASSES
                 }
         return render(request, "steg/select_choice.html", context)
 

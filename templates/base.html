@@ -73,5 +73,12 @@
     <script src="{% static 'js/index.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
     <script src="{% static 'js/upload.js' %}"></script>
-
+    <script>
+        $('.prevent').on('click', function(e) {
+            if ($(".normal-input").val() == "") {
+                alert("Pls enter a secret key");
+                e.preventDefault();
+            }
+        })
+    </script>
 </html5>
