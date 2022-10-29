@@ -3,13 +3,22 @@
 <div class="choices-container">
   <img src="{{ object.img.url }}" alt="Uploaded Image" />
   <div>
+    <h3>LSB Method</h3>
     <form method="post">
       <div class="choices-container--item">
         {% csrf_token %}
         <input type="password" name="message" class="normal-input" placeholder="Enter Secret Message">
-        {% for choice in choices %}
-        <input type="submit" value="{{ choice }}" name="type" />
-        {% endfor %}
+        <input type="submit" value="LSB Hide" name="type" />
+        <input type="submit" value="LSB Reveal" name="type" />
+      </div>
+    </form>
+    <h3>LSB Set Method</h3>
+    <form method="post">
+      <div class="choices-container--item">
+        {% csrf_token %}
+        <input type="password" name="message" class="normal-input" placeholder="Enter Secret Message">
+        <input type="submit" value="LSB Set Hide" name="type" />
+        <input type="submit" value="LSB Set Reveal" name="type" />
       </div>
     </form>
   </div>

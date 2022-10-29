@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+{% if msg %}
+<p>
+    The secret message is: {{ msg }}
+</p>
+{% else %}
+<p>
+    There is no message hidden in this image.
+</p>
+{% endif %}
+{% endblock body %}

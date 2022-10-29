@@ -15,44 +15,39 @@ from steg.functions import hide_lsb, reveal_lsb, hide_lsbset, reveal_lsbset
 
 CHOICES = ["LSB Hide", "LSB Reveal", "LSB Set Hide", "LSB Set Reveal"]
 
+def get_image(obj):
+# Retrieving the image and storing it in memory
+    url = obj.img.url
+    req = urllib.request.urlopen(url)
+    arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+    path = cv2.imdecode(arr, -1) # 'Load it as it is'
+    return path
+
 class ProcessImage(View):
     def get(self, request, choice):
         # messages.success(request, "Updated successfully!")
         return render(request, "steg/process.html")
 
     def post(self, request, choice):
+        option = request.POST.get("type")
 
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
-
-        # Retrieving the image and storing it in memory
-        url = obj.img.url
-        req = urllib.request.urlopen(url)
-        arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
-        path = cv2.imdecode(arr, -1) # 'Load it as it is'
+        
+        path = get_image(obj)
+        sec_msg = request.session.get("message", None)
 
         content_type = "image/png"
         file_name = "demo.png"
-        sec_msg = request.session.get("message", None)
+        
+
         if choice == 0:
             img = hide_lsb(path, sec_msg)
-        elif choice == 1:
-            msg, img = reveal_lsb(path)
-            return HttpResponse(msg)
         elif choice == 2:
             img = hide_lsbset(path, sec_msg)
-        elif choice == 3:
-            msg, img = reveal_lsbset(path)
-            return HttpResponse(msg)
-        elif choice == 4:
-            img = resize(path)
-        elif choice == 5:
-            img = encrypt_image(path)
         else:
             return HttpResponse("Invalid Option")
 
-        option = request.POST.get("type")
-        
         if option == "Preview":
             image_data = img.getvalue()
             return HttpResponse(image_data, content_type=content_type)
@@ -62,27 +57,43 @@ class ProcessImage(View):
             return HttpResponse("Invalid Option")
 
 class SelectChoice(View):
+
     def get(self, request):
 
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
+
         context={
                 "object": obj, 
                 "choices": CHOICES,
                 }
+
         return render(request, "steg/select_choice.html", context)
 
     def post(self, request):
 
         type = request.POST.get("type")
         request.session["message"] = request.POST.get("message", None)
+
+        id = request.session.get("id")
+        obj = SinImg.objects.get(id=id)
+
         if type:    
             choice_id = CHOICES.index(type)
+            if choice_id in [1, 3]:
+                path = get_image(obj)
+                if choice_id == 1:
+                    msg, img = reveal_lsb(path)
+                elif choice_id == 3:
+                    msg, img = reveal_lsbset(path)
+                return render(request, "steg/show_message.html", {"msg": msg})
+
             return redirect((reverse_lazy("steg:process", kwargs={"choice": choice_id})))
         else:
             return HttpResponse("Invalid Choice")
 
 class Upload(View):
+
     def get(self, request):
         form = SinImgForm()
         context = {
