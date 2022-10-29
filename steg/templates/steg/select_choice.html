@@ -3,7 +3,7 @@
 <div class="choices-container">
   <img src="{{ object.img.url }}" alt="Uploaded Image" />
   <div>
-    <form method="post">
+    <form class="select-choice" method="post">
       <div class="choices-container--item">
         {% csrf_token %}
         <input type="password" name="message" class="normal-input" placeholder="Enter Secret Message">
