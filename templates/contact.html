@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block body %}
 <div class="main">
   <form method="post" class="contact-form">
+    {% csrf_token %}
     <h1 class="contact-form--title">Contact Form</h1>
     <div class="inputs">
       <div class="input-group">
@@ -10,7 +11,7 @@
         <input type="email" class="contact-form--input" name="email" placeholder="E-mail" />
       </div>
       <div class="input-group">
-        <textarea class="contact-form--input" name="subject" placeholder="How can we help?"
+        <textarea class="contact-form--input" name="message" placeholder="How can we help?"
           style="height: 100PX"></textarea>
       </div>
     </div>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block body %}
+
+<div class="choices-container">
+  <img src="{{ object.img.url }}" alt="Uploaded Image" />
+  <div>
+    <form class="select-choice" method="post">
+      <div class="choices-container--item">
+        {% csrf_token %}
+        <input type="password" name="message" class="normal-input" placeholder="Enter Secret Message">
+        {% for choice,class in choices_with_classes.items %}
+        <input type="submit" value="{{ choice }}" name="type" class="{{class}}"/>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+
+</div>
+
+{% endblock body %}

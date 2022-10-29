@@ -67,7 +67,7 @@ input[type="file"] {
 
 .new-input-file p {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #999999;
 }
 .upload-button {
@@ -99,10 +99,6 @@ footer .content .right input[type="text"] {
 }
 
 @media screen and (max-width: 480px) {
-  input[type="submit"] {
-    font-size: 2rem;
-    width: 100%
-  }
   .upload-input-ui {
     border: 1px dashed #6C757D;
     width: 100%;

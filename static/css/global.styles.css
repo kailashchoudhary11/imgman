@@ -11,6 +11,9 @@ body {
     padding: 50px;
     text-align: center;
 }
+.text-uppercase {
+   text-transform: uppercase !important;
+}
 .input-group {
     margin-bottom: 2rem;
 }
@@ -26,6 +29,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    z-index: 999;
 }
 
 li {
@@ -86,6 +90,9 @@ img {
         width: 67px;
         background: url(/static/images/burger-bar.png) no-repeat 98% center;
     }
+    nav {
+        height: 67px;
+    }
     nav ul.open {
         height: auto;
         position:absolute;
@@ -94,7 +101,7 @@ img {
         display: block;
         overflow: hidden;
         height: 0;
-        min-width: 330px;
+        min-width: 320px;
     }
     
     nav ul li {
@@ -112,7 +119,6 @@ img {
         font-size: 2rem;
         width: 100%;
     }
-    
     label {
         font-size: 2rem;
     }

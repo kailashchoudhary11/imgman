@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+
+
+    <div class="w-100 d-block success-message">
+        <div class="alert alert-success text-center" role="alert">
+            Your Image Has Been Processed Successfully!
+        </div>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Download" name="type">
+        <input type="submit" value="Preview" name="type">
+    </form>
+
+</div>
+{% endblock body %}
