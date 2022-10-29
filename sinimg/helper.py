@@ -35,7 +35,7 @@ def clr_to_bw(img):
     return io_buf
 
 def sharp(img):
-    kernel = numpy.array([[0,-1,0],[-1,7,-1],[0,-1,0]])
+    kernel = numpy.array([[0,-1,0],[-1,5,-1],[0,-1,0]])
     img_sharp = cv2.filter2D(src=img, ddepth=-1, kernel=kernel )
     is_success, buffer = cv2.imencode(".png", img_sharp)
     io_buf = BytesIO(buffer)
