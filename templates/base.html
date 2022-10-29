@@ -74,14 +74,11 @@
     <script src="{% static 'js/menu.js' %}"></script>
     <script src="{% static 'js/upload.js' %}"></script>
     <script>
-        console.log($)
-        $('.select-choice').on('submit', function(e) {
+        $('.prevent').on('click', function(e) {
             if ($(".normal-input").val() == "") {
                 alert("Pls enter a secret key");
                 e.preventDefault();
-            } else {
-                $('.select-choice').submit()
             }
-        });
+        })
     </script>
 </html5>
