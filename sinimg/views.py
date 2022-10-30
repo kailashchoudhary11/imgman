@@ -17,6 +17,9 @@ class ProcessImage(View):
     A class to process an image.
     '''
     def get(self, request, choice):
+        '''
+        Shows the successfully processed page.
+        '''
         return render(request, "sinimg/process.html")
 
     def post(self, request, choice):
@@ -67,8 +70,13 @@ class ProcessImage(View):
             return HttpResponse("Invalid Option")
 
 class SelectChoice(View):
+    '''
+    A class to show the image processing choices.
+    '''
     def get(self, request):
-
+        '''
+        Shows the image processing choice page.
+        '''
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
         context={
@@ -78,7 +86,9 @@ class SelectChoice(View):
         return render(request, "sinimg/select_choice.html", context)
 
     def post(self, request):
-
+        '''
+        Returns the image processing choice.
+        '''
         type = request.POST.get("type")
         if type:    
             choice_id = CHOICES.index(type)
@@ -87,7 +97,13 @@ class SelectChoice(View):
             return HttpResponse("Invalid Choice")
 
 class Upload(View):
+    '''
+    A class to upload an image.
+    '''
     def get(self, request):
+        '''
+        Shows the upload page.
+        '''
         form = SinImgForm()
         context = {
             "form": form,
@@ -95,6 +111,9 @@ class Upload(View):
         return render(request, "sinimg/upload.html", context)
     
     def post(self, request):
+        '''
+        Uploads the image or sends a warning if the submitted file is not an image.
+        '''
         form = SinImgForm(request.POST, request.FILES)
 
         if form.is_valid():

@@ -6,6 +6,9 @@ from django.dispatch import receiver
 
 # Create your models here.
 class SinImg(models.Model):
+    '''
+    Creates an image model.
+    '''
     img = CloudinaryField('image', folder="media/images/single")
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -14,4 +17,7 @@ class SinImg(models.Model):
 
 @receiver(pre_delete, sender=SinImg)
 def photo_delete(sender, instance, **kwargs):
+    '''
+    Deletes the image.
+    '''
     cloudinary.uploader.destroy(instance.img.public_id)

@@ -4,6 +4,9 @@ from stegano import lsb
 import numpy as np
 
 def hide_text(img, msg="Demo Message"):
+    '''
+    Hides the text message.
+    '''
     is_success, buffer = cv2.imencode(".png", img)
     io_buf = BytesIO(buffer)
     hid = lsb.hide(io_buf, msg)
@@ -15,6 +18,9 @@ def hide_text(img, msg="Demo Message"):
     return io_buf
 
 def reveal_text(img):
+    '''
+    Reveals the text message.
+    '''
     is_success, buffer = cv2.imencode(".png", img)
     io_buf = BytesIO(buffer)
     # hid = lsb.hide(io_buf, msg)
