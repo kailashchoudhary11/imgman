@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html5>
@@ -18,6 +20,7 @@
         <link rel="stylesheet" href="{% static 'css/footer.styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/contact.styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/home.styles.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/about.styles.css' %}"> -->
         <title>{% block title %}{% endblock title %}</title>
     </head>
 
@@ -45,7 +48,7 @@
                             Steganography</a>
                     </li>
                     <li>
-                        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-info-sign"></i>About
+                        <a class="active" href="{% url 'core:about' %}"><i class="glyphicon glyphicon-info-sign"></i>About
                             us</a>
                     </li>
                     <li>
