@@ -3,35 +3,44 @@
 Home
 {% endblock title %}
 {% block body %}
-
 <div class="container home">
-    <div class="container-fluid logo-and-info">
+     <div class="container-fluid logo-and-info">
         <div>
             {% load static %}
             <img src="{% static 'images/logo.png' %}" alt="imgman-logo">
         </div>
+            
+        <div>
+                <p class="content">imgman is a unique web app which provides myriad of image manipulation options like blurring of
+                    image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.</p>
+                <p class="content">At the same time, the web app also provides with additional features like Image Processing & 
+                    Steganography. 
+                    <ul class="content">
+                        <li> Image Processing processes a digital image by means of an algorithm. It is done in order to
+                            enhance image either or to extract some useful information.
+                        </li>
+                        <li>Image Processing can be used in field of Robotics, Pattern recognition & Video processing.</li>
+                        <li>Steganography is the practice of representing information within another message or physical object, 
+                            in such a manner that the presence of the information is not evident to human inspection.
+                        </li>
+                    </ul> 
+                </p>
+        </div>
+    </div>
         
-        <div>
-            <p class="content">imgman is a unique web app which provides myriad of image manipulation options like blurring of
-                image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's built with django, a python web framework.</p>
-        </div>
-    </div>
-    
     <div class="images">
-    
+        
         <p class="heading">Uploaded Base Image:</p>
-        <img class="img1" src="{% static 'images/img-manipulation/base-img.jpg' %}" alt="base-image">
-    
-        <div>
-            <p class="heading">Results: </p>
-            <img class="img-results" src="{% static 'images/img-manipulation/gray.png' %}" alt="gray-image">
-            <img class="img-results" src="{% static 'images/img-manipulation/blur.png' %}" alt="blur-image">
-            <img class="img-results" src="{% static 'images/img-manipulation/black.png' %}" alt="black-image">
-            <img class="img-results" src="{% static 'images/img-manipulation/tint.png' %}" alt="tint-image">
-        </div>
+            <img class="img1" src="{% static 'images/img-manipulation/base-img.jpg' %}" alt="base-image">
+            <div>
+                <p class="heading">Results: </p>
+                <img class="img-results" src="{% static 'images/img-manipulation/gray.png' %}" alt="gray-image">
+                <img class="img-results" src="{% static 'images/img-manipulation/blur.png' %}" alt="blur-image">
+                <img class="img-results" src="{% static 'images/img-manipulation/black.png' %}" alt="black-image">
+                <img class="img-results" src="{% static 'images/img-manipulation/tint.png' %}" alt="tint-image">
+            </div>
     </div>
-    
-    
+        
+        
 </div>
-
 {% endblock body %}
