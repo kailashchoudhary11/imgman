@@ -13,10 +13,16 @@ from sinimg.models import SinImg
 CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image","Sharpen Image"]
 
 class ProcessImage(View):
+    '''
+    A class to process an image.
+    '''
     def get(self, request, choice):
         return render(request, "sinimg/process.html")
 
     def post(self, request, choice):
+        '''
+        Returns the processed image.
+        '''
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
 
