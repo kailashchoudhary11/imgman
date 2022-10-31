@@ -1,7 +1,7 @@
 .normal-input {
   width:100%;
-  background-color: #FFF;
-  border: 1px solid #444;
+  background-color: var(--WHITE);;
+  border: 1px solid var(--BLACK-300);
   padding: 0.5rem;
   border-radius: 4px;
   padding-left: 1rem;
@@ -13,8 +13,8 @@
     font-size: 2rem;
     width: 100%
     border: none !important;
-    background-color: #F1F1F1;
-    color: #fff !important;
+    background-color: var(--WHITE);
+    color: var(--WHITE); !important;
     margin-left: 1rem;
   }
   input[type="submit"] {
