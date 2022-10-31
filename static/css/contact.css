@@ -56,21 +56,3 @@
   font-weight: normal;
   font-size: 1.9rem;
 }
-
-@media screen and (max-width: 480px) {
-  .contact-form {
-    width: 90vw !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: 1px solid var(--GRAY-100);
-    border-radius: 5px;
-    padding: 2rem;
-    box-shadow: 7px 7px 7px var(--GRAY-100);
-    height: 100%;
-  }
-  .contact-form--button {
-    margin: 0 !important;
-    padding: 1rem !important;
-  }
-}

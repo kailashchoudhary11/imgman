@@ -96,62 +96,6 @@ img {
   font-size: 1vw;
   margin-bottom: 1.2rem;
 }
-
-@media screen and (max-width: 480px) {
-  .burger-nav {
-    display: block;
-    height: 67px;
-    width: 67px;
-    background: url(/static/images/burger-bar.png) no-repeat 98% center;
-  }
-  nav {
-    height: 67px;
-  }
-  nav ul.open {
-    height: auto;
-    position: absolute;
-  }
-  nav ul {
-    display: block;
-    overflow: hidden;
-    height: 0;
-    min-width: 320px;
-  }
-
-  nav ul li {
-    float: none;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-  }
-
-  a.active {
-    color: var(--WHITE);
-    border-bottom: 1px solid var(--BLACK-300);
-    display: block;
-    margin: 0;
-    font-size: 2rem;
-    width: 100%;
-  }
-  label {
-    font-size: 2rem;
-  }
-  #id_img {
-    max-width: 95%;
-    min-width: 316px;
-    font-size: 2.1rem;
-  }
-  .success-message {
-    font-size: 1.5rem !important;
-    width: 100%;
-    margin: 5rem auto;
-  }
-
-  form {
-    width: 99% !important;
-  }
-}
-
 .success-message {
   font-size: 1.8rem;
   width: 70%;

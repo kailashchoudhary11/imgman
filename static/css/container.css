@@ -1,11 +1,11 @@
-.choices-container{
+.choices-container {
   display: flex;
   justify-content: space-around;
   align-items: top;
   width: 100%;
 }
 
-.choices-container--item input{
+.choices-container--item input {
   display: block;
 }
 
@@ -15,11 +15,4 @@
   align-items: center;
   justify-content: center;
   height: 70vh;
-}
-
-@media screen and (max-width: 737px) {
-  .choices-container {
-    display:flex;
-    flex-direction: column;
-  }
 }

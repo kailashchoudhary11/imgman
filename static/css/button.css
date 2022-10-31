@@ -86,19 +86,3 @@ input[type="file"] {
 .upload-button:hover {
   background: var(--BLACK);
 }
-
-@media screen and (max-width: 480px) {
-  .upload-input-ui {
-    border: 1px dashed var(--BLACK-300);
-    width: 100%;
-    height: 250px;
-    cursor: pointer;
-    border-radius: 15px;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 900px) {
-  .upload-input-ui p {
-    font-size: 1.1rem;
-  }
-}
