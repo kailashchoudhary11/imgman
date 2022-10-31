@@ -30,7 +30,7 @@ You can visit the website over [**here**](https://imgman.herokuapp.com/)
 
 ## Getting started:
 
-In order to get you started, just make sure to checkout our [Contributing](CONTRIBUTING.md) file. 
+In order to get you started, just make sure to check out our [Contributing](CONTRIBUTING.md) file. 
 
 There you will find the instructions to build your environment and run the app!
 
