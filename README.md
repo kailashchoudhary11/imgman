@@ -30,15 +30,9 @@ You can visit the website over [**here**](https://imgman.herokuapp.com/)
 
 ## Getting started:
 
-You need the executable [pg_config](https://stackoverflow.com/questions/11618898/pg-config-executable-not-found) and the [development python packages](https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory) to install the requirements.txt, if using linux.
+In order to get you started, just make sure to checkout our [Contributing](CONTRIBUTING.md) file. 
 
-After that, you can create your .env as defined in the .env.example file.
-
-```
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
+There you will find the instructions to build your environment and run the app!
 
 ## Screenshots:
 
