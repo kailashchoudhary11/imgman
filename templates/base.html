@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html5>
@@ -17,6 +19,8 @@
         <link rel="stylesheet" href="{% static 'css/image.styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/footer.styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/contact.styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.styles.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/about.styles.css' %}"> -->
         <title>{% block title %}{% endblock title %}</title>
     </head>
 
@@ -44,7 +48,7 @@
                             Steganography</a>
                     </li>
                     <li>
-                        <a class="active" href="add-the-path-here"><i class="glyphicon glyphicon-info-sign"></i>About
+                        <a class="active" href="{% url 'core:about' %}"><i class="glyphicon glyphicon-info-sign"></i>About
                             us</a>
                     </li>
                     <li>
@@ -73,5 +77,12 @@
     <script src="{% static 'js/index.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
     <script src="{% static 'js/upload.js' %}"></script>
-
+    <script>
+        $('.prevent').on('click', function(e) {
+            if ($(".normal-input").val() == "") {
+                alert("Pls enter a secret key");
+                e.preventDefault();
+            }
+        })
+    </script>
 </html5>

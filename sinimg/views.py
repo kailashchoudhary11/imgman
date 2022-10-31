@@ -7,16 +7,25 @@ from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views import View
 from sinimg.forms import SinImgForm
-from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize
+from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize, sharp
 from sinimg.models import SinImg
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image",]
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image","Sharpen Image"]
 
 class ProcessImage(View):
+    '''
+    A class to process an image.
+    '''
     def get(self, request, choice):
+        '''
+        Shows the successfully processed page.
+        '''
         return render(request, "sinimg/process.html")
 
     def post(self, request, choice):
+        '''
+        Returns the processed image.
+        '''
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
 
@@ -45,6 +54,8 @@ class ProcessImage(View):
             img = encrypt_image(path)
         elif choice == 6:
             img = decrypt_image(path)
+        elif choice == 7:
+            img = sharp(path)
         else:
             return HttpResponse("Invalid Option")
 
@@ -59,8 +70,13 @@ class ProcessImage(View):
             return HttpResponse("Invalid Option")
 
 class SelectChoice(View):
+    '''
+    A class to show the image processing choices.
+    '''
     def get(self, request):
-
+        '''
+        Shows the image processing choice page.
+        '''
         id = request.session.get("id")
         obj = SinImg.objects.get(id=id)
         context={
@@ -70,7 +86,9 @@ class SelectChoice(View):
         return render(request, "sinimg/select_choice.html", context)
 
     def post(self, request):
-
+        '''
+        Returns the image processing choice.
+        '''
         type = request.POST.get("type")
         if type:    
             choice_id = CHOICES.index(type)
@@ -79,7 +97,13 @@ class SelectChoice(View):
             return HttpResponse("Invalid Choice")
 
 class Upload(View):
+    '''
+    A class to upload an image.
+    '''
     def get(self, request):
+        '''
+        Shows the upload page.
+        '''
         form = SinImgForm()
         context = {
             "form": form,
@@ -87,6 +111,9 @@ class Upload(View):
         return render(request, "sinimg/upload.html", context)
     
     def post(self, request):
+        '''
+        Uploads the image or sends a warning if the submitted file is not an image.
+        '''
         form = SinImgForm(request.POST, request.FILES)
 
         if form.is_valid():

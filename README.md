@@ -13,6 +13,7 @@ You can visit the website over [**here**](https://imgman.herokuapp.com/)
 ## ***Table Of Content***:
 
   - [imgman](#imgman)
+  - [Getting Started](#getting-started)
   - [Screenshots](#screenshots)
   - [Background](#background)
   - [Architecture](#architecture)
@@ -26,6 +27,12 @@ You can visit the website over [**here**](https://imgman.herokuapp.com/)
   - [License](#license)
   - [Contributors](#contributors)
   - [Happy Coding](#happy-coding)
+
+## Getting started:
+
+In order to get you started, just make sure to check out our [Contributing](CONTRIBUTING.md) file. 
+
+There you will find the instructions to build your environment and run the app!
 
 ## Screenshots:
 
