@@ -1,16 +1,19 @@
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
 .about-section {
-  background: url(../images/pic.jpg) no-repeat left;
+  display: flex;
+  align-items: center;
   background-size: 55%;
   background-color: var(--GRAY-100);
   overflow: hidden;
-  padding: 100px 0;
 }
 
-.inner-container {
-  width: 55%;
-  float: right;
-  background-color: var(--GRAY-100);
-  padding: 150px;
+.about-section__mission p,
+.about-section p {
+  text-align: left;
 }
 
 .inner-container h1 {
@@ -26,10 +29,7 @@
   text-align: justify;
   margin-bottom: 40px;
 }
-
-.skills {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 700;
-  font-size: 13px;
+.about-section__stats {
+  background-color: var(--GRAY-100);
+  margin: 0;
 }
