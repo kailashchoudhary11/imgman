@@ -1,0 +1,141 @@
+@media screen and (max-width: 480px) {
+  .contact-form {
+    width: 90vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid var(--GRAY-100);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 7px 7px 7px var(--GRAY-100);
+    height: 100%;
+  }
+  .default_input {
+    font-size: 2rem;
+    width: 100%;
+    border: 1px solid var(--BLACK-300) !important;
+    background-color: var(--WHITE);
+    color: var(--black) !important;
+    margin-left: 1rem;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+  .contact-form__button {
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+  .upload_form__drag_and_drop {
+    border: 1px dashed var(--BLACK-300);
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  .burger-nav {
+    display: block;
+    height: 67px;
+    width: 67px;
+    background: url(/static/images/burger-bar.png) no-repeat 98% center;
+  }
+  nav {
+    height: 67px;
+  }
+  nav ul.open {
+    height: auto;
+    position: absolute;
+  }
+  nav ul {
+    display: block;
+    overflow: hidden;
+    height: 0;
+    min-width: 320px;
+  }
+
+  nav ul li {
+    float: none;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  a.active {
+    color: var(--WHITE);
+    border-bottom: 1px solid var(--BLACK-300);
+    display: block;
+    margin: 0;
+    font-size: 2rem;
+    width: 100%;
+  }
+  label {
+    font-size: 2rem;
+  }
+  #id_img {
+    max-width: 95%;
+    min-width: 316px;
+    font-size: 2.1rem;
+  }
+  .success-message {
+    font-size: 1.5rem !important;
+    width: 100%;
+    margin: 5rem auto;
+  }
+
+  .upload_form {
+    width: 99% !important;
+  }
+}
+
+@media screen and (max-width: 480px) and (max-width: 900px) {
+  .upload_form__drag_and_drop p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-section {
+    padding: 0 !important;
+  }
+  .inner-container {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 737px) {
+  .choices-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-section--flex-column {
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 738px) {
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .inner-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-container {
+    padding: 80px;
+  }
+}

@@ -1,0 +1,21 @@
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.images {
+  padding: 2rem;
+}
+
+.images__image {
+  width: 21rem;
+  height: auto;
+  margin: 1rem;
+}
+
+.images__image--result {
+  width: 20rem;
+  height: auto;
+  margin: 1rem;
+}

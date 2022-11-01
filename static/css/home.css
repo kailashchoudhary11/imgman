@@ -1,0 +1,14 @@
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-section__content {
+  font-size: 2rem;
+}
+
+.images__title {
+  font-size: 2rem;
+}

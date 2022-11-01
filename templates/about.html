@@ -1,29 +1,30 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block body %}
-<div id="about-section" class="row">
+<div class="row about-section">
     <div class="flex-child inner-container">
         <h1>About IMGMAN</h1>
         <p class="text">
-            IMGMAN is a unique web app which provides a myriad of image manipulation options 
-            such as image blurring, black and white filters, converting to pdf, adding 
+            IMGMAN is a unique web app which provides a myriad of image manipulation options
+            such as image blurring, black and white filters, converting to pdf, adding
             grayscale effect, and resizing the image. It's built with Django, a Python web framework.
         </p>
     </div>
     <div class="flex-child">
-        <img src="../static/images/pic.jpg" alt="">
+        <img class="flex-child__img" src="../static/images/pic.jpg" alt="">
     </div>
 </div>
-<div id="mission-statement">
+<div class="about-section__mission">
     <div class="inner-container">
         <h1>Our Mission</h1>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio reiciendis dolorum 
-            repellendus sint atque sed et quas eveniet pariatur aspernatur dolor nisi aperiam, 
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio reiciendis dolorum
+            repellendus sint atque sed et quas eveniet pariatur aspernatur dolor nisi aperiam,
             reprehenderit quae veniam. Cum praesentium molestiae doloremque.
         </p>
     </div>
-    
+
 </div>
-<div id="contributors">
+
+<div class="about-section__contributors">
     <div class="inner-container">
         <h1>Our Contributors</h1>
         <p class="text">Thank you to all who contributed to the completion of this project...</p>
@@ -185,7 +186,7 @@
         </div>
     </div>
 </div>
-<div id="app-stats" class="container">
+<div class="container about-section__stats">
     <div class="row">
         <div class="col-xs-4">
             <h4>23K</h4>

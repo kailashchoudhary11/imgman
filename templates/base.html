@@ -1,5 +1,3 @@
-
-
 {% load static %}
 <!DOCTYPE html>
 <html5>
@@ -12,15 +10,20 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
         <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-        <link rel="stylesheet" href="{% static 'css/global.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/container.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/button.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/input.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/image.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/footer.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/contact.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/home.styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/about.styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
+        <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+        <link rel="stylesheet" href="{% static 'css/container.css' %}">
+        <link rel="stylesheet" href="{% static 'css/button.css' %}">
+        <link rel="stylesheet" href="{% static 'css/input.css' %}">
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+        <link rel="stylesheet" href="{% static 'css/images.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+        <link rel="stylesheet" href="{% static 'css/media-query.css' %}">
+
         <title>{% block title %}{% endblock title %}</title>
     </head>
 
@@ -28,30 +31,31 @@
         <div id="app">
             <nav>
                 <a class="burger-nav"></a>
-                <ul>
-                    <li>
+                <ul class="navbar__list">
+                    <li class="navbar__list--item">
                         <a class="active" href="{% url 'core:index' %}"><i class="glyphicon glyphicon-home"> </i> Home
                             Page</a>
                     </li>
-                    {% comment %} <li>
+                    {% comment %} <li class="navbar__list--item">
                         <a class="active" href="{% url 'sinimg:upload' %}"><i class="glyphicon glyphicon-upload"> </i>
                             Image Processing</a>
                     </li> {% endcomment %}
 
-                    <li>
+                    <li class="navbar__list--item">
                         <a class="active" href="{% url 'sinimg:upload' %}"><i
                                 class="glyphicon glyphicon-refresh"></i>Image
                             Processing</a>
                     </li>
-                    <li>
+                    <li class="navbar__list--item">
                         <a class="active" href="{% url 'steg:upload' %}"><i class="glyphicon glyphicon-upload"> </i>
                             Steganography</a>
                     </li>
-                    <li>
-                        <a class="active" href="{% url 'core:about' %}"><i class="glyphicon glyphicon-info-sign"></i>About
+                    <li class="navbar__list--item">
+                        <a class="active" href="{% url 'core:about' %}"><i
+                                class="glyphicon glyphicon-info-sign"></i>About
                             us</a>
                     </li>
-                    <li>
+                    <li class="navbar__list--item">
                         <a class="active" href="{% url 'core:contact' %}"><i
                                 class="glyphicon glyphicon-user"></i>Contact
                             us</a>
@@ -78,8 +82,8 @@
     <script src="{% static 'js/menu.js' %}"></script>
     <script src="{% static 'js/upload.js' %}"></script>
     <script>
-        $('.prevent').on('click', function(e) {
-            if ($(".normal-input").val() == "") {
+        $('.prevent').on('click', function (e) {
+            if ($(".default_input").val() == "") {
                 alert("Pls enter a secret key");
                 e.preventDefault();
             }

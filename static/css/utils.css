@@ -1,0 +1,41 @@
+.success-message {
+  font-size: 1.8rem;
+  width: 70%;
+  margin: 5rem auto;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.input-group {
+  margin-bottom: 2rem;
+}
+.text-red {
+  color: var(--RED) !important;
+}
+
+.glyphicon {
+  margin: 10px;
+}
+
+.flex-child {
+  flex: 1;
+  width: 55%;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+.flex-child .flex-child__img {
+  max-width: 412px;
+  max-width: 295px;
+}
+
+label {
+  border-radius: 5px;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  line-height: 150%;
+  font-size: 1.5vw;
+}
