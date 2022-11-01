@@ -1,5 +1,5 @@
 input[type="submit"] {
-  width: 35rem; // 560px;
+  width: 35rem;
   background-color: var(--CYAN);
   color: var(--WHITE);
   padding: 10px 15px;
