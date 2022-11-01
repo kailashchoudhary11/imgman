@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-.choices-container--item input {
+.choices-container--d-block input {
   display: block;
 }
 

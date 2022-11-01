@@ -79,7 +79,7 @@
     <script src="{% static 'js/upload.js' %}"></script>
     <script>
         $('.prevent').on('click', function (e) {
-            if ($(".normal-input").val() == "") {
+            if ($(".default_input").val() == "") {
                 alert("Pls enter a secret key");
                 e.preventDefault();
             }

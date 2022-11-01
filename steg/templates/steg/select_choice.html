@@ -3,12 +3,12 @@
 <div class="choices-container">
   <img src="{{ object.img.url }}" alt="Uploaded Image" />
   <div>
-    <form class="select-choice" method="post">
-      <div class="choices-container--item">
+    <form method="post">
+      <div class="choices-container--d-block">
         {% csrf_token %}
-        <input type="password" name="message" class="normal-input" placeholder="Enter Secret Message">
+        <input type="password" name="message" class="default_input" placeholder="Enter Secret Message">
         {% for choice,class in choices_with_classes.items %}
-        <input type="submit" value="{{ choice }}" name="type" class="{{class}}"/>
+        <input type="submit" value="{{ choice }}" name="type" class="{{class}}" />
         {% endfor %}
       </div>
     </form>

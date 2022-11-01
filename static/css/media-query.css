@@ -10,7 +10,7 @@
     box-shadow: 7px 7px 7px var(--GRAY-100);
     height: 100%;
   }
-  .normal-input {
+  .default_input {
     font-size: 2rem;
     width: 100%;
     border: none !important;
