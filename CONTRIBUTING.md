@@ -3,72 +3,78 @@
 Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md) .
 
 ## Figma Design Link
+
 - [Figma Link](https://www.figma.com/file/N1GUOSfNsqb8NTInxXj75K/Imgman-Project?node-id=0%3A1)
+
+## CSS BEM Convention
+
+We use BEM (Block, Element, Modifier) Convention,
+please read documentation to keep css in order: [CSS B.E.M. Convention Documentation](https://getbem.com/) .
 
 ## Installation and Usage
 
--   ### Prerequisites
+- ### Prerequisites
 
-    -   Python >= 3.8
+  - Python >= 3.8
 
-    -   VS Code or any other IDE
+  - VS Code or any other IDE
 
--   ### Fork the Repository
+- ### Fork the Repository
 
-    Click on the fork button on the upper right corner to fork the repository.
+  Click on the fork button on the upper right corner to fork the repository.
 
--   ### Clone the Repository
+- ### Clone the Repository
 
-    ```bash
-    git clone https://github.com/{your-github-username}/imgman.git
+  ```bash
+  git clone https://github.com/{your-github-username}/imgman.git
 
-    cd imgman
-    ```
+  cd imgman
+  ```
 
--   ### Create and Activate New Virtual Environment
+- ### Create and Activate New Virtual Environment
 
-    Refer to this [guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/) or follow the below steps!
+  Refer to this [guide](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/) or follow the below steps!
 
-    ```bash
-    python -m venv venv
-    ```
+  ```bash
+  python -m venv venv
+  ```
 
-    -   Windows
-
-        ```bash
-        .\venv\Scripts\activate
-        ```
-
-    -   Linux / Mac
-        ```bash
-        source venv/bin/activate
-        ```
-
-    **_note: you should be on the same dir as requirements.txt file_**
-
--   ### Install the requirements
+  - Windows
 
     ```bash
-    pip install -r requirements.txt
+    .\venv\Scripts\activate
     ```
 
--   ### Create .env File
-
-    This project uses the [Cloudinary](https://cloudinary.com) service to store images. You can create a free account [here](https://cloudinary.com/users/register/free) and get your API keys.
-
-    Then, create a new .env file same as the [.env.example](.env.example) file and fill in the required fields.
-
--   ### Create Database and Tables
-
+  - Linux / Mac
     ```bash
-    python manage.py migrate
+    source venv/bin/activate
     ```
 
--   ### Run the Django Server
+  **_note: you should be on the same dir as requirements.txt file_**
 
-    ```bash
-    python manage.py runserver
-    ```
+- ### Install the requirements
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- ### Create .env File
+
+  This project uses the [Cloudinary](https://cloudinary.com) service to store images. You can create a free account [here](https://cloudinary.com/users/register/free) and get your API keys.
+
+  Then, create a new .env file same as the [.env.example](.env.example) file and fill in the required fields.
+
+- ### Create Database and Tables
+
+  ```bash
+  python manage.py migrate
+  ```
+
+- ### Run the Django Server
+
+  ```bash
+  python manage.py runserver
+  ```
 
 ## Pull Requests
 

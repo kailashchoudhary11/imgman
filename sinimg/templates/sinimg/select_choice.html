@@ -4,7 +4,7 @@
   <img src="{{ object.img.url }}" alt="Uploaded Image" />
   <div>
     <form method="post">
-      <div class="choices-container--item">
+      <div class="choices-container--d-block">
         {% csrf_token %} {% for choice in choices %}
         <input type="submit" value="{{ choice }}" name="type" />
         {% endfor %}

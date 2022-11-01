@@ -1,0 +1,29 @@
+.navbar__list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--BLACK-300);
+  z-index: 999;
+}
+
+.navbar__list--item {
+  float: left;
+}
+
+.navbar__list--item a {
+  display: block;
+  color: var(--WHITE);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.navbar__list--item a:hover {
+  background-color: var(--BLACK-100);
+  text-decoration: none;
+  color: var(--CYAN);
+}

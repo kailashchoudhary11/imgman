@@ -1,0 +1,77 @@
+input[type="submit"] {
+  width: 35rem; // 560px;
+  background-color: var(--CYAN);
+  color: var(--WHITE);
+  padding: 10px 15px;
+  border: none;
+  margin: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+input[type="file"] {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  line-height: 150%;
+  font-size: 2em;
+  background: transparent;
+  border: 1px solid var(--BLACK-300);
+  cursor: pointer;
+}
+.upload_form__drag_and_drop {
+  border: 1px dashed var(--BLACK-300);
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: spaced-between;
+  padding-top: 5rem;
+}
+.upload_form__drag_and_drop p {
+  font-size: 1.5rem !important;
+}
+
+.upload_form__django_container label,
+input[type="file"] {
+  display: none;
+}
+.upload_form__input--disabled {
+  width: 100%;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 1.5em;
+  background: var(--GRAY-100);
+  border: 0.5px solid var(--GRAY-200);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+.upload_form__input--disabled p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--GRAY-200);
+}
+.upload_form__button {
+  background-color: var(--BLACK-300);
+  color: var(--WHITE);
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0;
+  height: 40px;
+  width: 110px;
+  transition: 0.2s;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.upload_form__button:hover {
+  background: var(--BLACK);
+}

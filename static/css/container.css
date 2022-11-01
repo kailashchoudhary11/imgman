@@ -1,11 +1,11 @@
-.choices-container{
+.choices-container {
   display: flex;
   justify-content: space-around;
   align-items: top;
   width: 100%;
 }
 
-.choices-container--item input{
+.choices-container--d-block input {
   display: block;
 }
 
@@ -16,10 +16,10 @@
   justify-content: center;
   height: 70vh;
 }
-
-@media screen and (max-width: 737px) {
-  .choices-container {
-    display:flex;
-    flex-direction: column;
-  }
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
 }

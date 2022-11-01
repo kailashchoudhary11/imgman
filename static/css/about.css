@@ -1,0 +1,35 @@
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  background-size: 55%;
+  background-color: var(--GRAY-100);
+  overflow: hidden;
+}
+
+.about-section__mission p,
+.about-section p {
+  text-align: left;
+}
+
+.inner-container h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 13px;
+  color: var(--GRAY-300);
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+.about-section__stats {
+  background-color: var(--GRAY-100);
+  margin: 0;
+}
