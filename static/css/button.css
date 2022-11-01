@@ -32,7 +32,7 @@ input[type="file"] {
   border: 1px solid var(--BLACK-300);
   cursor: pointer;
 }
-.upload-input-ui {
+.upload_form__drag_and_drop {
   border: 1px dashed var(--BLACK-300);
   width: 100%;
   height: 200px;
@@ -44,15 +44,15 @@ input[type="file"] {
   justify-content: spaced-between;
   padding-top: 5rem;
 }
-.upload-input-ui p {
+.upload_form__drag_and_drop p {
   font-size: 1.5rem !important;
 }
 
-.django-container label,
+.upload_form__django_container label,
 input[type="file"] {
   display: none;
 }
-.new-input-file {
+.upload_form__input--disabled {
   width: 100%;
   border-radius: 5px;
   line-height: 100%;
@@ -66,12 +66,12 @@ input[type="file"] {
   justify-content: space-between;
 }
 
-.new-input-file p {
+.upload_form__input--disabled p {
   margin-top: 1rem;
   font-size: 1.5rem;
   color: var(--GRAY-200);
 }
-.upload-button {
+.upload_form__button {
   background-color: var(--BLACK-300);
   color: var(--WHITE);
   border: none;
@@ -81,8 +81,8 @@ input[type="file"] {
   width: 110px;
   transition: 0.2s;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
-.upload-button:hover {
+.upload_form__button:hover {
   background: var(--BLACK);
 }

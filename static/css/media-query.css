@@ -26,7 +26,7 @@
     margin: 0 !important;
     padding: 1rem !important;
   }
-  .upload-input-ui {
+  .upload_form__drag_and_drop {
     border: 1px dashed var(--BLACK-300);
     width: 100%;
     height: 250px;
@@ -82,13 +82,13 @@
     margin: 5rem auto;
   }
 
-  form {
+  .upload_form {
     width: 99% !important;
   }
 }
 
 @media screen and (max-width: 480px) and (max-width: 900px) {
-  .upload-input-ui p {
+  .upload_form__drag_and_drop p {
     font-size: 1.1rem;
   }
 }

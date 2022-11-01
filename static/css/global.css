@@ -102,9 +102,9 @@ img {
   margin: 5rem auto;
 }
 
-form {
+.upload_form {
   width: 100%;
 }
-#form_id {
+#upload_form_id {
   width: 200%;
 }
