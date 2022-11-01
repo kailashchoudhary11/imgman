@@ -3,15 +3,16 @@
 Home
 {% endblock title %}
 {% block body %}
-<div class="container home">
-    <div class="container-fluid logo-and-info">
+<div class="home-section">
+    <div class="container-fluid home-section--flex-column">
         <div>
             {% load static %}
             <img src="{% static 'images/logo.png' %}" alt="imgman-logo">
         </div>
 
         <div>
-            <p class="content">imgman is a unique web app which provides myriad of image manipulation options like
+            <p class="home-section__content">imgman is a unique web app which provides myriad of image manipulation
+                options like
                 blurring of
                 image, black and white filters, converting to pdf, adding grayscale effect, resizing the image. It's
                 built with django, a python web framework.</p>
@@ -19,15 +20,14 @@ Home
     </div>
 
     <div class="images">
-
-        <p class="heading">Uploaded Base Image:</p>
-        <img class="img1" src="{% static 'images/img-manipulation/base-img.jpg' %}" alt="base-image">
+        <p class="images__title">Uploaded Base Image:</p>
+        <img class="images__image" src="{% static 'images/img-manipulation/base-img.jpg' %}" alt="base-image">
         <div>
-            <p class="heading">Results: </p>
-            <img class="img-results" src="{% static 'images/img-manipulation/gray.png' %}" alt="gray-image">
-            <img class="img-results" src="{% static 'images/img-manipulation/blur.png' %}" alt="blur-image">
-            <img class="img-results" src="{% static 'images/img-manipulation/black.png' %}" alt="black-image">
-            <img class="img-results" src="{% static 'images/img-manipulation/tint.png' %}" alt="tint-image">
+            <p class="images__title">Results: </p>
+            <img class="images__image--result" src="{% static 'images/img-manipulation/gray.png' %}" alt="gray-image">
+            <img class="images__image--result" src="{% static 'images/img-manipulation/blur.png' %}" alt="blur-image">
+            <img class="images__image--result" src="{% static 'images/img-manipulation/black.png' %}" alt="black-image">
+            <img class="images__image--result" src="{% static 'images/img-manipulation/tint.png' %}" alt="tint-image">
         </div>
     </div>
 

@@ -1,15 +1,15 @@
-.home {
+.home-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.content {
+.home-section__content {
   font-size: 2rem;
 }
 
-.heading {
+.images__title {
   font-size: 2rem;
 }
 
@@ -17,13 +17,13 @@
   padding: 2rem;
 }
 
-.img1 {
+.images__image {
   width: 21rem;
   height: auto;
   margin: 1rem;
 }
 
-.img-results {
+.images__image--result {
   width: 20rem;
   height: auto;
   margin: 1rem;
