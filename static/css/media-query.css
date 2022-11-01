@@ -1,4 +1,38 @@
 @media screen and (max-width: 480px) {
+  .contact-form {
+    width: 90vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid var(--GRAY-100);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 7px 7px 7px var(--GRAY-100);
+    height: 100%;
+  }
+  .normal-input {
+    font-size: 2rem;
+    width: 100%;
+    border: none !important;
+    background-color: var(--WHITE);
+    color: var(--WHITE) !important;
+    margin-left: 1rem;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+  .contact-form--button {
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+  .upload-input-ui {
+    border: 1px dashed var(--BLACK-300);
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
   .burger-nav {
     display: block;
     height: 67px;
@@ -53,61 +87,18 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .inner-container {
-    padding: 80px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .about-section {
-    background-size: 100%;
-    padding: 100px 40px;
-  }
-  .inner-container {
-    width: 100%;
+@media screen and (max-width: 480px) and (max-width: 900px) {
+  .upload-input-ui p {
+    font-size: 1.1rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .about-section {
-    padding: 0;
+    padding: 0 !important;
   }
   .inner-container {
-    padding: 60px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .upload-input-ui {
-    border: 1px dashed var(--BLACK-300);
-    width: 100%;
-    height: 250px;
-    cursor: pointer;
-    border-radius: 15px;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 900px) {
-  .upload-input-ui p {
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .contact-form {
-    width: 90vw !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: 1px solid var(--GRAY-100);
-    border-radius: 5px;
-    padding: 2rem;
-    box-shadow: 7px 7px 7px var(--GRAY-100);
-    height: 100%;
-  }
-  .contact-form--button {
-    margin: 0 !important;
-    padding: 1rem !important;
+    padding: 5px;
   }
 }
 
@@ -116,15 +107,9 @@
     display: flex;
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 738px) {
   .logo-and-info {
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 737px) {
   img {
     width: 100%;
     height: auto;
@@ -139,16 +124,18 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .normal-input {
-    font-size: 2rem;
-    width: 100%
-    border: none !important;
-    background-color: var(--WHITE);
-    color: var(--WHITE); !important;
-    margin-left: 1rem;
+@media screen and (max-width: 1000px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
   }
-  input[type="submit"] {
+  .inner-container {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-container {
+    padding: 80px;
   }
 }
