@@ -13,9 +13,9 @@
   .default_input {
     font-size: 2rem;
     width: 100%;
-    border: none !important;
+    border: 1px solid var(--BLACK-300) !important;
     background-color: var(--WHITE);
-    color: var(--WHITE) !important;
+    color: var(--black) !important;
     margin-left: 1rem;
   }
 
