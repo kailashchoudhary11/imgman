@@ -22,7 +22,7 @@
   input[type="submit"] {
     width: 100%;
   }
-  .contact-form--button {
+  .contact-form__button {
     margin: 0 !important;
     padding: 1rem !important;
   }
