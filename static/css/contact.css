@@ -17,7 +17,7 @@
   box-shadow: 7px 7px 7px var(--GRAY-100);
   height: 600px;
 }
-.inputs {
+.contact-form__input_group {
   width: 100%;
   display: flex;
   flex-direction: column;
