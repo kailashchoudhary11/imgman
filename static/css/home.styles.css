@@ -53,8 +53,6 @@
   text-align: left;
 }
 
-/* @media screen and (max-width: 738px)  { */
-    .logo-and-info {
-        flex-direction: column;
-    }
-/* } */
+.logo-and-info {
+  flex-direction: column;
+}
