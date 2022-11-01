@@ -29,8 +29,30 @@
   margin: 1rem;
 }
 
-@media screen and (max-width: 738px)  {
-    .logo-and-info {
-        flex-direction: column;
-    }
+.content-head {
+  text-align: center;
+  margin:3rem 0 2rem;
+}
+
+.content-list {
+  flex-direction:column;
+  background-color: #fff;
+  font-size: 2rem;
+  list-style-type: circle;
+  padding: 0 1rem;
+  overflow: visible;
+}
+
+.logo {
+  height:10rem;
+  width: auto;
+  margin: 0 0 2rem 0;
+}
+
+.info {
+  text-align: left;
+}
+
+.logo-and-info {
+  flex-direction: column;
 }
