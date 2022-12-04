@@ -46,14 +46,14 @@
     height: auto;
     position: absolute;
   }
-  nav ul {
+  .navbar__list {
     display: block;
     overflow: hidden;
     height: 0;
     min-width: 320px;
   }
 
-  nav ul li {
+  .navbar__list--item {
     float: none;
     text-align: left;
     width: 100%;
