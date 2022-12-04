@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .contact-form {
     width: 90vw !important;
     display: flex;
@@ -24,7 +24,7 @@
   }
   .contact-form__button {
     margin: 0 !important;
-    padding: 1rem !important;
+    padding: 1rem !important; 
   }
   .upload_form__drag_and_drop {
     border: 1px dashed var(--BLACK-300);
