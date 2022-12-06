@@ -10,6 +10,7 @@ from django.http import HttpResponseRedirect
 import cv2
 import numpy as np
 import urllib.request
+import requests
 
 from steg.functions import hide_lsb, reveal_lsb, hide_lsbset, reveal_lsbset
 
@@ -40,12 +41,12 @@ class ProcessImage(View):
             img = hide_lsb(path, sec_msg)
         elif choice == 1:
             msg, img = reveal_lsb(path)
-            return HttpResponse(msg)
+            return render(request, "steg/reveal.html", context={"msg": msg})
         elif choice == 2:
             img = hide_lsbset(path, sec_msg)
         elif choice == 3:
             msg, img = reveal_lsbset(path)
-            return HttpResponse(msg)
+            return render(request, "steg/reveal.html", context={"msg": msg})
         elif choice == 4:
             img = resize(path)
         elif choice == 5:
@@ -81,6 +82,7 @@ class SelectChoice(View):
         request.session["message"] = request.POST.get("message", None)
         if type:    
             choice_id = CHOICES.index(type)
+            
             return redirect((reverse_lazy("steg:process", kwargs={"choice": choice_id})))
         else:
             return HttpResponse("Invalid Choice")
