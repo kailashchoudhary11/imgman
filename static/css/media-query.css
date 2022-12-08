@@ -1,4 +1,4 @@
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .contact-form {
     width: 90vw !important;
     display: flex;
@@ -24,7 +24,7 @@
   }
   .contact-form__button {
     margin: 0 !important;
-    padding: 1rem !important;
+    padding: 1rem !important; 
   }
   .upload_form__drag_and_drop {
     border: 1px dashed var(--BLACK-300);
@@ -46,14 +46,14 @@
     height: auto;
     position: absolute;
   }
-  nav ul {
+  .navbar__list {
     display: block;
     overflow: hidden;
     height: 0;
     min-width: 320px;
   }
 
-  nav ul li {
+  .navbar__list--item {
     float: none;
     text-align: left;
     width: 100%;

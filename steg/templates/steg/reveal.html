@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+
+
+    <div class="w-100 d-block success-message">
+        <div class="alert alert-success text-center" role="alert">
+            The Secret Text Hiden in the message is: 
+        </div>
+        <div class="alert alert-danger text-center" role="alert">
+            {{ msg }}
+        </div>
+    </div>
+    
+
+</div>
+{% endblock body %}
