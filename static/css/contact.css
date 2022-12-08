@@ -94,21 +94,15 @@
 .follow-widget li a i:hover{
   opacity: 0.8;
 }
-.follow-widget li a i.fa.fa-facebook {
-  background-color: #3b5997;
-}
+
 .follow-widget li a i.fa.fa-twitter {
   background-color: #57aced;
+  margin-left: 140px;
 }
-.follow-widget li a i.fa.fa-pinterest-p {
-  background-color: #cb2026;
+
+.follow-widget li a i.fa.fa-github {
+  background-color: black;  
+  margin-left: 140px;
 }
-.follow-widget li a i.fa.fa-instagram {
-  background-color: #3e729a;
-}
-.follow-widget li a i.fa.fa-google-plus {
-  background-color: #db4d41;
-}
-.follow-widget li a i.fa.fa-youtube-play {
-  background-color: #c42f2b;
-}
+
+
