@@ -1,6 +1,7 @@
 from io import BytesIO
 import cv2
 import img2pdf
+import matplotlib.pyplot as plt
 import numpy
 
 def blur(img):
@@ -83,4 +84,13 @@ def decrypt_image(img, key=123):
     xor_decrypted_img = cv2.bitwise_xor(img, key)
     is_success, buffer = cv2.imencode(".png", xor_decrypted_img)
     io_buf = BytesIO(buffer)
+    return io_buf
+
+def flip_image(img,flipcode):
+    '''•flipcode = 0: flip vertically around the x-axis
+    •flipcode > 0: flip horizontally around y-axis positive value
+    •flipcode<0: flip vertically and horizontally, flipping around both axes negative value'''
+    im_flip = cv2.rotate(img,0)
+    plt.imshow(cv2.cvtColor(im_flip,cv2.COLOR_BGR2RGB))
+    plt.show()  
     return io_buf

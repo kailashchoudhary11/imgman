@@ -10,7 +10,7 @@ from sinimg.forms import SinImgForm
 from sinimg.helper import blur, color_to_grayscale, clr_to_bw, decrypt_image, encrypt_image, img_to_pdf, resize, sharp
 from sinimg.models import SinImg
 
-CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image","Sharpen Image"]
+CHOICES = ["Convert To GrayScale", "Convert To PDF", "Convert To Blur", "Convert To Black And White", "Resize Image", "Encrypt Image", "Decrypt Image","Sharpen Image","Flip Image"]
 
 class ProcessImage(View):
     '''
@@ -56,6 +56,13 @@ class ProcessImage(View):
             img = decrypt_image(path)
         elif choice == 7:
             img = sharp(path)
+        elif choice==8:
+            print('''•flipcode = 0: flip vertically around the x-axis
+                •flipcode > 0: flip horizontally around y-axis positive value
+                •flipcode<0: flip vertically and horizontally, flipping around both axes negative value''')
+            flipcode=int(input("Enter the value to flip the image in the desired direction."))
+            img= flip_image(path,flipcode)
+
         else:
             return HttpResponse("Invalid Option")
 
