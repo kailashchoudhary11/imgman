@@ -56,3 +56,53 @@
   font-weight: normal;
   font-size: 1.9rem;
 }
+.follow-widget {
+  text-align: center;
+  width: 90%;
+  margin: 50px auto;
+  display: table;
+  border: 1px solid #ddd;
+  padding: 10px 10px 20px;
+  border-radius: 10px;
+}
+.follow-widget h2 {
+  border-bottom: 1px solid #ddd;
+  padding: 0px 0px 25px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+.follow-widget ul{
+  padding: 0px;
+  margin: 0px;
+}
+.follow-widget li {
+  float: left;
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0px 10px;
+  width: 16.666%;
+}
+.follow-widget li a i {
+  background-color: #f1f1f1;
+  color: #fff;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  line-height: 43px !important;
+}
+.follow-widget li a i:hover{
+  opacity: 0.8;
+}
+
+.follow-widget li a i.fa.fa-twitter {
+  background-color: #57aced;
+  margin-left: 140px;
+}
+
+.follow-widget li a i.fa.fa-github {
+  background-color: black;  
+  margin-left: 140px;
+}
+
+
